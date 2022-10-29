@@ -1,0 +1,98 @@
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveInDown {
+    from{
+        transform: translateY(-40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInUp {
+    from{
+        transform: translateY(40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInLeft {
+    from{
+        transform: translate(40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+@keyframes moveInRight {
+    from{
+        transform: translate(-40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+
+/*Fin de animaciones*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    scroll-behavior: smooth;
+} 
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--colorPrimario);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+:root{
+    --colorPrimario: #45536d;
+    --colorPrimarioT: rgba(69, 83, 109, 0.9);
+
+    --colorEnPrimario: #FFFFFF;
+    --colorEnPrimarioT: rgba(244, 244, 244, 0.9);
+    
+    --colorSecundario: #af790c;
+    --colorSecundarioT: rgba(175, 121, 12, 0.9);
+
+    --marronClaro: rgb(140, 107, 72);
+    --azulOscuro: rgb(36, 47, 68);
+    --blanco: rgb(255, 255, 255);
+}
+
+/*Fin de estilos generales*/
+
+
+
+/*Media queries*/
+

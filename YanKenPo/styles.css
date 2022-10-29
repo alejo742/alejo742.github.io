@@ -1,0 +1,109 @@
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveInDown {
+    from{
+        transform: translateY(-40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInUp {
+    from{
+        transform: translateY(40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInLeft {
+    from{
+        transform: translate(40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+@keyframes moveInRight {
+    from{
+        transform: translate(-40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+
+/*Fin de animaciones*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    scroll-behavior: smooth;
+} 
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--colorPrimario);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    color: var(--colorEnPrimario);
+}
+:root{
+    --colorPrimario: rgb(221, 84, 84);
+    --colorPrimarioT: rgba(221, 84, 84, 0.8);
+
+    --colorEnPrimario: rgb(255, 255, 255);
+    --colorEnPrimarioT: rgba(255, 255, 255, 0.8);
+    
+    --colorSecundario: rgb(237, 219, 192);
+    --colorSecundarioT: rgba(237, 219, 192, 0.8);
+}
+
+/*Fin de estilos generales*/
+
+header {
+    width: 100vw;
+    min-height: 15vh;
+}
+
+main {
+    width: 100vw;
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+}
+
+#game {
+    display: none;
+}
+
+/*Media queries*/
