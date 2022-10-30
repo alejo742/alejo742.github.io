@@ -13,19 +13,45 @@
     <title>Piedra, papel o tijeras</title>
 </head>
 <body>
+
     <header>
         <div class="container">
-            <img src="" alt="">
+            <img src="../res/logoAM2.png" alt="AM">
         </div>
-        <div class="container"></div>
-        <div class="container"></div>
+        <div class="container">
+            <div>
+                <a href="">Portafolio</a>
+                <a href="">Sobre mí</a>
+            </div>
+        </div>
     </header>
-    <main>
-        <div class="left"></div>
-        <div class="right"></div>
-        <div id="game"></div>
+
+    <main id="main">
+        <div class="main-container" id="left">
+            <h1>Piedra, papel <br>o tijeras</h1>
+            <span>El juego clásico</span>
+            <div>
+                <a id="play">Juega ahora</a>
+                <a target="_blank" href="https://github.com/alejo742/alejo742.github.io/tree/master/YanKenPo" id="code">Mira el código</a>
+            </div>
+        </div>
+        <div class="main-container" id="right">
+            <div id="right-1">
+                <img src="./res/roca.png" alt="">
+            </div>
+            <div id="right-2">
+                <img src="./res/papel.png" alt="">
+            </div>
+            <div id="right-3">
+                <img src="./res/tijera.png" alt="">
+            </div>
+        </div>
     </main>
+
+    <div id="game" onclick="showGame()"></div>
+
     <footer></footer>
+    
     <script src="game.js"></script>
 </body>
 </html>

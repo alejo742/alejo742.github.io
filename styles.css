@@ -59,6 +59,7 @@
     animation-name: fadeIn;
     animation-duration: 1s;
     scroll-behavior: smooth;
+    border: 2px dotted var(--colorSecundario);
 } 
 html{
     font-size: 62.5%;
@@ -76,18 +77,19 @@ html, body {
     width: 100%;
 }
 :root{
-    --colorPrimario: #45536d;
-    --colorPrimarioT: rgba(69, 83, 109, 0.9);
+    --colorPrimario: rgb(255, 255, 255);
+    --colorPrimarioT: rgba(255, 255, 255, 0.7);
 
-    --colorEnPrimario: #FFFFFF;
-    --colorEnPrimarioT: rgba(244, 244, 244, 0.9);
+    --colorEnPrimario: rgb(0, 0, 0);
+    --colorEnPrimarioT: rgba(0, 0, 0, 0.7);
     
-    --colorSecundario: #af790c;
-    --colorSecundarioT: rgba(175, 121, 12, 0.9);
+    --colorSecundario: rgb(0, 185, 169);
+    --colorSecundarioT: rgb(0, 185, 169, 0.7);
 
-    --marronClaro: rgb(140, 107, 72);
-    --azulOscuro: rgb(36, 47, 68);
-    --blanco: rgb(255, 255, 255);
+    --texto: 1.5rem;
+    --subtitulo: 2.5rem;
+    --titulo: 3.5rem;
+    --banner: 5rem;
 }
 
 /*Fin de estilos generales*/

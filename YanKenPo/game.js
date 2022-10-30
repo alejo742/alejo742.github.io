@@ -14,7 +14,7 @@ opciones.forEach(opcion => {
                 selected = opcion.id
             }
         }
-        else if(opcion.id = 'piedra') {
+        else if(opcion.id = 'papel') {
             if(opcion.style.borderWidth != '8px'){
                 o1.style.borderWidth = '1px'
                 o2.style.borderWidth = '8px'
@@ -22,11 +22,11 @@ opciones.forEach(opcion => {
                 selected = opcion.id
             }
         }
-        else if(opcion.id = 'piedra') {
+        else if(opcion.id = 'tijera') {
             if(opcion.style.borderWidth != '8px'){
                 o1.style.borderWidth = '1px'
-                o2.style.borderWidth = '8px'
-                o3.style.borderWidth = '1px'
+                o2.style.borderWidth = '1px'
+                o3.style.borderWidth = '8px'
                 selected = opcion.id
             }
         }
