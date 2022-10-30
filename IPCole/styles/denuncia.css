@@ -1,0 +1,458 @@
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveInDown {
+    from{
+        transform: translateY(-40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInUp {
+    from{
+        transform: translateY(40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInLeft {
+    from{
+        transform: translate(40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+@keyframes moveInRight {
+    from{
+        transform: translate(-40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+
+/*Fin de animaciones*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    scroll-behavior: smooth;
+} 
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--colorPrimario);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+:root{
+    --colorPrimario: #45536d;
+    --colorPrimarioT: rgba(69, 83, 109, 0.9);
+
+    --colorEnPrimario: #FFFFFF;
+    --colorEnPrimarioT: rgba(244, 244, 244, 0.9);
+    
+    --colorSecundario: #af790c;
+    --colorSecundarioT: rgba(175, 121, 12, 0.9);
+
+    --marronClaro: rgb(140, 107, 72);
+    --azulOscuro: rgb(36, 47, 68);
+    --blanco: rgb(255, 255, 255);
+}
+
+/*Fin de estilos generales*/
+
+/*Estilos de portada*/
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+}
+.h-element {
+    margin: 1.5rem auto;
+}
+.upper {
+    animation-name: moveInDown;
+    animation-duration: 1.5s;
+}
+a.h-element {
+    padding: 1rem;
+    color: var(--colorEnPrimario);
+    text-decoration: none;
+    font-size: 1.2rem;
+    background-color: var(--colorPrimario);
+    transition: all 0.5s;
+}
+a.h-element:hover {
+    font-size: 1.3rem;
+    padding: 1.2rem;
+    background-color: var(--colorPrimarioT);
+}
+h1.h-element {
+    font-size: 3.5rem;
+}
+h2.h-element {
+    font-size: 2rem;
+}
+.h-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90vw;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.h-grid:hover {
+    width: 92%;
+    cursor: pointer;
+}
+.header-step {
+    margin: 2rem auto;
+    min-height: 50vh;
+    max-height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s;
+    text-decoration: none;
+    color: var(--colorPrimario);
+    animation-name: moveInUp;
+    animation-duration: 2s;
+}
+.header-step:hover {
+    padding: 2rem;
+    border: 1px solid var(--colorSecundario);
+}
+.header-step div, img, p {
+    margin: 1rem auto;
+}
+.header-step div {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    background-color: var(--colorSecundario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-step div span {
+    margin: 0 auto;
+    color: var(--colorEnPrimario);
+    font-size: 2rem;
+}
+.header-step img {
+    min-width: 40%;
+    max-width: 70%;
+    max-height: 40%;
+}
+.header-step p {
+    font-size: 1.5rem;
+    max-width: 80%;
+}
+
+/*Estilos de main*/
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+.step {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+    border: 2px solid var(--colorPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: font-size 0.5s;
+}
+.step:hover{
+    font-size: 1.1em;
+    cursor: pointer;
+}
+.step * {
+    margin: 1rem auto;
+}
+.step h1 {
+    font-size: 3em;
+}
+.step h4 {
+    font-size: 1.5em;
+}
+.quiz {
+    display: none;
+}
+.quiz:hover{
+    cursor: auto;
+}
+#quiz1 > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    height: 60vh;
+}
+#quiz1 > div > div {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+}
+#description-textbox {
+    padding: 1rem;
+    border: 2px solid var(--colorPrimario);
+    border-radius: 5%;
+}
+#quiz1 > div > div > div {
+    display: inline block;
+}
+#quiz1 > div > div > div input {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+#quiz1 > div > div > div span {
+    margin: auto;
+    font-size: 1.4rem;
+    height: 100%;
+}
+
+#quiz2 {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    height: 60vh;
+}
+#quiz2 > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#quiz2 > div * {
+    margin: 1rem auto;
+}
+#quiz2 > div span {
+    padding: 0.5rem;
+    border: 1px solid var(--colorPrimario);
+}
+#quiz2 > div button {
+    background-color: var(--colorPrimario);
+    color: var(--colorEnPrimario);
+    font-size: 1.5rem;
+    padding: 1rem;
+    transition: all 0.5s;
+    border: none;
+}
+#quiz2 > div button:hover {
+    cursor: pointer;
+    background-color: var(--colorPrimarioT);
+    padding: 1.2rem;
+    font-size: 1.6rem;
+}
+
+#quiz3 {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    height: 60vh;
+}
+#quiz3 > div {
+    width: 90%;
+    height: 90%;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#quiz3 > div h5 {
+    font-size: 1.2rem;
+}
+#quiz3 > div input {
+    width: 30vw;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+#quiz3 > div a {
+    background-color: var(--colorPrimario);
+    color: var(--colorEnPrimario);
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    transition: all 0.5s;
+}
+#quiz3 > div a:hover {
+    padding: 1.2rem;
+    font-size: 1.7rem;
+    background-color: var(--colorPrimarioT);
+}
+
+/*Estilos del footer*/
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+    border-top: 2px solid var(--colorPrimario);
+}
+.footer-left-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.footer-left-div h3{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.footer-left-div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer-left-div > div {
+    display: flex;
+    flex-direction: row;
+}
+.footer-left-div img {
+    max-height: 1.2em;
+    margin: 0 0.5em;
+}
+.footer-left-div span {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.footer-right-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.footer-right-div span {
+    font-size: 1.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+/*Media queries*/
+
+@media (hover: none) {
+    header {
+      opacity: 1;
+    }
+  }
+@media (max-width: 2100px) {
+    html{
+        font-size: 112.5%;
+    }
+}
+@media (max-width: 2000px) {
+    html{
+        font-size: 106.25%;
+    }
+}
+@media (max-width: 1900px) {
+    html{
+        font-size: 100%;
+    }
+}
+@media (max-width: 1800px) {
+    html{
+        font-size: 93.75%;
+    }
+}
+@media (max-width: 1700px) {
+    html{
+        font-size: 87.5%;
+    }
+}
+@media (max-width: 1600px) {
+    html{
+        font-size: 81.25%;
+    }
+}
+@media (max-width: 1500px) {
+    html{
+        font-size: 75%;
+    }
+}
+@media (max-width: 1400px) {
+    html{
+        font-size: 68.75%;
+    }
+}
+@media (max-width: 1200px) {
+    html{
+        font-size: 56.25%;
+    }
+}
+@media (max-width: 1100px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width: 1000px) {
+    html{
+        font-size: 43.75%;
+    }
+}
+@media (max-width: 900px) {
+    html{
+        font-size: 37.5%;
+    }
+}
+@media (max-width: 800px) {
+    html{
+        font-size: 31.25%;
+    }
+}
+@media (max-width: 700px) {
+    html{
+        font-size: 25%;
+    }
+}

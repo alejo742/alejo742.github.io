@@ -1,0 +1,269 @@
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveInDown {
+    from{
+        transform: translateY(-40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInUp {
+    from{
+        transform: translateY(40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInLeft {
+    from{
+        transform: translate(40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+@keyframes moveInRight {
+    from{
+        transform: translate(-40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+
+/*Fin de animaciones*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    scroll-behavior: smooth;
+} 
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--colorPrimario);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100vw;
+}
+:root{
+    --colorPrimario: #45536d;
+    --colorPrimarioT: rgba(69, 83, 109, 0.9);
+
+    --colorEnPrimario: #FFFFFF;
+    --colorEnPrimarioT: rgba(244, 244, 244, 0.9);
+    
+    --colorSecundario: #af790c;
+    --colorSecundarioT: rgba(175, 121, 12, 0.9);
+
+    --marronClaro: rgb(140, 107, 72);
+    --azulOscuro: rgb(36, 47, 68);
+    --blanco: rgb(255, 255, 255);
+}
+
+/*Fin de estilos generales*/
+
+/*Estilos de header*/
+
+header {
+    background-image: url("../res/informate/cybercrime.jpg");
+    width: 100vw;
+    height: 100vh;
+    animation-duration: 1s;
+    color: var(--colorEnPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header h1, p {
+    opacity: 1;
+    margin: 0 auto;
+    width: fit-content;
+}
+header h1 {
+    font-size: 10em;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+}
+header p {
+    font-size: 2em;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+}
+header p a {
+    color: var(--colorEnPrimario);
+    text-decoration: underline;
+}
+header p a:hover {
+    cursor: pointer;
+    color: var(--colorSecundario);
+}
+header > a {
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+    padding: 0.5em;
+    width: 5vw;
+    margin: 1rem auto;
+    width: 8em;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: padding, 0.5s;
+}
+header > a:hover {
+    color: var(--colorSecundario);
+    padding: 1em;
+}
+
+/*Estilos de main*/
+
+main {
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+    width: 100vw;
+    min-height: 100vh;
+    max-height: 120vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.article {
+    display: grid;
+    grid-template-rows: repeat(2 1fr);
+    border: 2px solid var(--colorPrimario);
+    text-decoration: none;
+    color: var(--colorPrimario);
+    transition: font-size, 0.5s;
+}
+.article:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 1.1em;
+}
+.article div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.article img {
+    max-height: 14em;
+}
+.article h1 {
+    font-size: 2.5em;
+    margin: 0.5em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.article p {
+    font-size: 1.2em;
+    margin: 0.5em;
+}
+
+/*Media queries*/
+
+@media (max-width: 2100px) {
+    html{
+        font-size: 112.5%;
+    }
+}
+@media (max-width: 2000px) {
+    html{
+        font-size: 106.25%;
+    }
+}
+@media (max-width: 1900px) {
+    html{
+        font-size: 100%;
+    }
+}
+@media (max-width: 1800px) {
+    html{
+        font-size: 93.75%;
+    }
+}
+@media (max-width: 1700px) {
+    html{
+        font-size: 87.5%;
+    }
+}
+@media (max-width: 1600px) {
+    html{
+        font-size: 81.25%;
+    }
+}
+@media (max-width: 1500px) {
+    html{
+        font-size: 75%;
+    }
+}
+@media (max-width: 1400px) {
+    html{
+        font-size: 68.75%;
+    }
+}
+@media (max-width: 1200px) {
+    html{
+        font-size: 56.25%;
+    }
+}
+@media (max-width: 1100px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width: 1000px) {
+    html{
+        font-size: 43.75%;
+    }
+}
+@media (max-width: 900px) {
+    html{
+        font-size: 37.5%;
+    }
+}
+@media (max-width: 800px) {
+    html{
+        font-size: 31.25%;
+    }
+}
+@media (max-width: 700px) {
+    html{
+        font-size: 25%;
+    }
+}

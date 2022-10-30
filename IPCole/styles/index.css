@@ -1,0 +1,575 @@
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveInDown {
+    from{
+        transform: translateY(-40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInUp {
+    from{
+        transform: translateY(40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInLeft {
+    from{
+        transform: translate(40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+@keyframes moveInRight {
+    from{
+        transform: translate(-40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+
+/*Fin de animaciones*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    scroll-behavior: smooth;
+} 
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--colorPrimario);
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+:root{
+    --colorPrimario: #45536d;
+    --colorPrimarioT: rgba(69, 83, 109, 0.9);
+
+    --colorEnPrimario: #FFFFFF;
+    --colorEnPrimarioT: rgba(244, 244, 244, 0.9);
+    
+    --colorSecundario: #af790c;
+    --colorSecundarioT: rgba(175, 121, 12, 0.9);
+
+    --marronClaro: rgb(140, 107, 72);
+    --azulOscuro: rgb(36, 47, 68);
+    --blanco: rgb(255, 255, 255);
+}
+
+/*Fin de estilos generales*/
+
+header{
+    width: 100%;
+    height: 8em;
+    background-color: var(--colorPrimario);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 1em 0;
+    opacity: 0;
+    transition: opacity 1.5s;
+    animation-name: moveInDown, fadeOut;
+    animation-duration: 2s;
+}
+header:hover{
+    opacity: 1;
+}
+.header-ul-1{
+    margin-right: 10em;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.header-logo-container{
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-logo-container img{
+    width: 24em;
+    height: 7.2em;
+}
+.header-ul-2{
+    margin-left: 8em;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.header-a-container{
+    margin-left: 1em;
+    margin-right: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-a-container a{
+    text-decoration: none;
+    color: var(--colorEnPrimario);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.header-a-container a:hover{
+    text-decoration: underline;
+    color: var(--colorSecundario);
+}
+#header-a-login a{
+    margin-left: 4em;
+    color: var(--colorPrimario);
+    background-color: var(--colorEnPrimario);
+    border-radius: 10%;
+    padding: 1em;
+}
+#header-a-login a:hover{
+    text-decoration: none;
+    background-color: var(--colorEnPrimarioT);
+}
+
+
+/*Fin de estilos de header*/
+
+main{
+    background-color: var(--colorPrimario);
+    width: 100%;
+    margin: 0 10px 10px 10px;
+}
+.main-section{
+    width: 100%;
+    min-height: 90vh;
+    max-height: 100vh;
+    border: 2px solid var(--colorPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section-text-link {
+    text-decoration: underline;
+}
+
+/*Estilos sección 1*/
+
+#main-section-1{
+    color: var(--colorEnPrimario);
+    padding: 2em;
+}
+#main-section-1-div{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+#main-section-1-text-div{
+    height: 48em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+}
+#main-section-1-img {
+    height: 48em;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+}
+#main-section-1-title{
+    font-size: 8em;
+    font-weight: 700;
+}
+#main-section-1-subtitle{
+    font-size: 3em;
+}
+#main-section-1-subtitle > a {
+    color: var(--colorEnPrimario);
+}
+#main-section-1-subtitle a:hover {
+    color: var(--colorSecundario);
+}
+#main-section-1-denounce-button{
+    background-color: var(--colorSecundario);
+    color: var(--colorEnPrimario);
+    padding: 0.5em;
+    margin: 1em 2em;
+    font-size: 2.5rem;
+    text-decoration: none;
+    width: 8em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: width, 0.5s;
+}
+#main-section-1-denounce-button:hover{
+    cursor: pointer;
+    background-color: var(--colorSecundarioT);
+    width: 9em;
+}
+
+/*Estilos sección 2*/
+
+#main-section-2 {
+    color: var(--colorPrimario);
+    background-color: var(--colorEnPrimario);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+.main-section-2-side-div{
+    height: 100%;
+    width: 100%;
+}
+#main-section-2-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main-section-2-title{
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#main-section-2-title h1 {
+    font-size: 5em;
+}
+#main-section-2-p {
+    width: 100%;
+    font-size: 2.2em;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+#main-section-2-p p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main-section-2-p div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#main-section-2-p > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main-section-2-p div img {
+    max-width: 80%;
+}
+#main-section-2-button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2em;
+}
+#main-section-2-button a {
+    padding: 1.5em;
+    font-size: 2em;
+    background-color: var(--colorSecundario);
+    border-radius: 5%;
+    color: var(--colorEnPrimario);
+    text-decoration: none;
+    transition: padding, 0.5s;
+}
+#main-section-2-button a:hover {
+    cursor: pointer;
+    background-color: var(--colorSecundarioT);
+    padding: 1.8em;
+}
+
+/*Estilos sección 3*/
+
+#main-section-3{
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+    padding: 2em;
+}
+#main-section-3-div{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+}
+#main-section-3-text-div{
+    height: 48em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+#main-section-3-img {
+    height: 48em;
+}
+#main-section-3-title{
+    font-size: 8em;
+    font-weight: 700;
+}
+#main-section-3-subtitle{
+    font-size: 3em;
+}
+#main-section-3-denounce-button{
+    background-color: var(--colorSecundario);
+    color: var(--colorEnPrimario);
+    padding: 0.5em;
+    margin: 1em 2em;
+    font-size: 0.8em;
+    text-decoration: none;
+    width: 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: padding, 0.5s;
+}
+#main-section-3-denounce-button:hover{
+    cursor: pointer;
+    background-color: var(--colorSecundarioT);
+    padding: 1em;
+}
+
+/*Estilos sección 4*/
+
+#main-section-4 {
+    color: var(--colorPrimario);
+    background-color: var(--colorEnPrimario);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+}
+.main-section-4-side-div{
+    height: 100%;
+    width: 100%;
+}
+#main-section-4-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main-section-4-title{
+    width: 100%;
+    padding: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#main-section-4-title h1 {
+    font-size: 5em;
+}
+#main-section-4-p {
+    width: 100%;
+    font-size: 2.2em;
+    padding: 2em;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+#main-section-4-p p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main-section-4-p div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#main-section-4-p > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#main-section-4-p img {
+    max-width: 100%;
+}
+#main-section-4-button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2em;
+}
+#main-section-4-button a {
+    padding: 1.5em;
+    font-size: 2em;
+    background-color: var(--colorSecundario);
+    border-radius: 5%;
+    color: var(--colorEnPrimario);
+    text-decoration: none;
+    transition: padding, 0.5s;
+}
+#main-section-4-button a:hover {
+    cursor: pointer;
+    background-color: var(--colorSecundarioT);
+    padding: 2em;
+}
+
+/*Estilos del footer*/
+
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+    border-top: 2px solid var(--colorPrimario);
+}
+.footer-left-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+.footer-left-div h3{
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.footer-left-div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.footer-left-div > div {
+    display: flex;
+    flex-direction: row;
+}
+.footer-left-div img {
+    max-height: 1.2em;
+    margin: 0 0.5em;
+}
+.footer-left-div span {
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+.footer-right-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.footer-right-div span {
+    font-size: 1.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+/*Media queries*/
+
+@media (hover: none) {
+    header {
+      opacity: 1;
+    }
+  }
+@media (max-width: 2100px) {
+    html{
+        font-size: 112.5%;
+    }
+}
+@media (max-width: 2000px) {
+    html{
+        font-size: 106.25%;
+    }
+}
+@media (max-width: 1900px) {
+    html{
+        font-size: 100%;
+    }
+}
+@media (max-width: 1800px) {
+    html{
+        font-size: 93.75%;
+    }
+}
+@media (max-width: 1700px) {
+    html{
+        font-size: 87.5%;
+    }
+}
+@media (max-width: 1600px) {
+    html{
+        font-size: 81.25%;
+    }
+}
+@media (max-width: 1500px) {
+    html{
+        font-size: 75%;
+    }
+}
+@media (max-width: 1400px) {
+    html{
+        font-size: 68.75%;
+    }
+}
+@media (max-width: 1200px) {
+    html{
+        font-size: 56.25%;
+    }
+}
+@media (max-width: 1100px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width: 1000px) {
+    html{
+        font-size: 43.75%;
+    }
+}
+@media (max-width: 900px) {
+    html{
+        font-size: 37.5%;
+    }
+}
+@media (max-width: 800px) {
+    html{
+        font-size: 31.25%;
+    }
+}
+@media (max-width: 700px) {
+    html{
+        font-size: 25%;
+    }
+}
+

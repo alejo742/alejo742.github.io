@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/test.css">
+    <link rel="icon" href="../IP2022/res/general/cybersecurity-icon-rounded.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hubballi&family=Josefin+Sans:wght@400&family=League+Gothic&family=Sansita+Swashed:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@300&family=Poppins:wght@300&family=Raleway:wght@500&display=swap');
+    </style>
+    <title>Toma el test</title>
+</head>
+<body>
+
+    <header>
+        <a href="javascript:history.back()"><- Volver</a>
+        <h1>¡Toma nuestro test!</h1>
+        <h2>Averigua a qué ciberdelitos eres más vulnerable y obtén recomendaciones para evitar ser víctima de uno, respondiendo estas preguntas</h2>
+        <a onclick="showMain()" href="#question1" id="start-button">Comienza el test</a>
+    </header>
+
+    <main id="main">
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Utilizas la misma contraseña en tus cuentas (redes sociales, correos electrónicos, bloqueo de aplicaciones)?</h1>
+            </div>
+            <div class="options">
+                <a href="#question1" class="option fraude hackeo phishing"><span>Nunca</span></a>
+                <a href="#question1" class="option fraude hackeo phishing"><span>Pocas veces</span></a>
+                <a href="#question1" class="option fraude hackeo phishing"><span>Constantemente</span></a>
+                <a href="#question1" class="option fraude hackeo phishing"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Compartes información personal (nombre completo, edad, lugar de residencia, etc) en alguna página web?</h1>
+            </div>
+            <div class="options">
+                <a href="#question2" class="option fraude phishing"><span>Nunca</span></a>
+                <a href="#question2" class="option fraude phishing"><span>Pocas veces</span></a>
+                <a href="#question2" class="option fraude phishing"><span>Constantemente</span></a>
+                <a href="#question2" class="option fraude phishing"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Haces uso de tu tarjeta de crédito / débito en alguna página web no segura?</h1>
+            </div>
+            <div class="options">
+                <a href="#question3" class="option carding"><span>Nunca</span></a>
+                <a href="#question3" class="option carding"><span>Pocas veces</span></a>
+                <a href="#question3" class="option carding"><span>Constantemente</span></a>
+                <a href="#question3" class="option carding"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Navegas sin antivirus?</h1>
+            </div>
+            <div class="options">
+                <a href="#question4" class="option hackeo ciberacoso"><span>Nunca</span></a>
+                <a href="#question4" class="option hackeo ciberacoso"><span>Pocas veces</span></a>
+                <a href="#question4" class="option hackeo ciberacoso"><span>Constantemente</span></a>
+                <a href="#question4" class="option hackeo ciberacoso"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Te conectas a redes Wifi de libre acceso?</h1>
+            </div>
+            <div class="options">
+                <a href="#question5" class="option hackeo carding sexting"><span>Nunca</span></a>
+                <a href="#question5" class="option hackeo carding sexting"><span>Pocas veces</span></a>
+                <a href="#question5" class="option hackeo carding sexting"><span>Constantemente</span></a>
+                <a href="#question5" class="option hackeo carding sexting"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Compartes alguna contraseña con otra persona?</h1>
+            </div>
+            <div class="options">
+                <a href="#question6" class="option fraude phishing ciberacoso"><span>Nunca</span></a>
+                <a href="#question6" class="option fraude phishing ciberacoso"><span>Pocas veces</span></a>
+                <a href="#question6" class="option fraude phishing ciberacoso"><span>Constantemente</span></a>
+                <a href="#question6" class="option fraude phishing ciberacoso"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Compartes fotos íntimas con un tercero?</h1>
+            </div>
+            <div class="options">
+                <a href="#question7" class="option sexting ciberacoso"><span>Nunca</span></a>
+                <a href="#question7" class="option sexting ciberacoso"><span>Pocas veces</span></a>
+                <a href="#question7" class="option sexting ciberacoso"><span>Constantemente</span></a>
+                <a href="#question7" class="option sexting ciberacoso"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Compartes la clave de tu tarjeta de crédito / débito?</h1>
+            </div>
+            <div class="options">
+                <a href="#question8" class="option carding phishing"><span>Nunca</span></a>
+                <a href="#question8" class="option carding phishing"><span>Pocas veces</span></a>
+                <a href="#question8" class="option carding phishing"><span>Constantemente</span></a>
+                <a href="#question8" class="option carding phishing"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#">Siguiente</a>
+            </div>
+        </div>
+
+        <div  class="question">
+            <div class="text">
+                <h1>¿Ingresas a links no seguros? (enviados desde alguna red de mensajería)</h1>
+            </div>
+            <div class="options">
+                <a href="#question9" class="option hackeo phishing"><span>Nunca</span></a>
+                <a href="#question9" class="option hackeo phishing"><span>Pocas veces</span></a>
+                <a href="#question9" class="option hackeo phishing"><span>Constantemente</span></a>
+                <a href="#question9" class="option hackeo phishing"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a class="next-button" href="#question10">Siguiente</a>
+            </div>
+        </div>
+
+        <div class="question">
+            <div class="text">
+                <h1>¿Has aceptado solicitudes de cuentas desconocidas en alguna red social?</h1>
+            </div>
+            <div class="options">
+                <a href="#question10" class="option ciberacoso sexting phishing"><span>Nunca</span></a>
+                <a href="#question10" class="option ciberacoso sexting phishing"><span>Pocas veces</span></a>
+                <a href="#question10" class="option ciberacoso sexting phishing"><span>Constantemente</span></a>
+                <a href="#question10" class="option ciberacoso sexting phishing"><span>Siempre</span></a>
+            </div>
+            <div class="next-container">
+                <a onclick="showR()" class="next-button" href="#resultados">Enviar</a>
+            </div>
+        </div>
+
+        <div id="resultados">
+            <h1>Vulnerabilidad a los siguientes ciberdelitos:</h1>
+            <h2>¡Haz click en cada cuadro para ver recomendaciones para ti!</h2>
+            <div>
+                <div class="result">
+                    <div class="bar-c">
+                        <div class="bar" id="sexting-bar"></div>
+                    </div>
+
+                    <h1 class="per" id="sexting-per">10%</h1>
+                    <h1>Sexting</h1>
+                </div>
+
+                <div class="result">
+                    <div class="bar-c">
+                        <div class="bar" id="fraude-bar"></div>
+                    </div>
+
+                    <h1 class="per" id="fraude-per">27%</h1>
+                    <h1>Fraude</h1>
+                </div>
+
+                <div class="result">
+                    <div class="bar-c">
+                        <div class="bar" id="carding-bar"></div>
+                    </div>
+
+                    <h1 class="per" id="carding-per">16%</h1>
+                    <h1>Carding</h1>
+                </div>
+
+                <div class="result">
+                    <div class="bar-c">
+                        <div class="bar" id="phishing-bar"></div>
+                    </div>
+
+                    <h1 class="per" id="phishing-per">19%</h1>
+                    <h1>Phishing</h1>
+                </div>
+
+                <div class="result">
+                    <div class="bar-c">
+                        <div class="bar" id="hackeo-bar"></div>
+                    </div>
+
+                    <h1 class="per" id="hackeo-per">25%</h1>
+                    <h1>Hackeo</h1>
+                </div>
+
+                <div class="result">
+                    <div class="bar-c">
+                        <div class="bar" id="ciberacoso-bar"></div>
+                    </div>
+
+                    <h1 class="per" id="ciberacoso-per">18%</h1>
+                    <h1>Ciberacoso</h1>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-left-div">
+
+            <h3>¡Contáctanos!</h3>
+            <div>
+                <div>
+                    <span><img src="./res/general/mail-icon.png" alt="Correo:">cyberfix@gmail.com</span>
+                </div>
+                <div>
+                    <span><img src="./res/general/phone-icon.png"   alt="Teléfono:">983362075</span>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="footer-right-div">
+            <span>CyberFix © 2022</span>
+        </div>
+
+    </footer>
+    <script src="./scripts/test.js"></script>
+</body>
+</html>

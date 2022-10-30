@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/register.css">
+    <link rel="icon" href="../IP2022/res/general/cybersecurity-icon-rounded.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hubballi&family=Josefin+Sans:wght@400&family=League+Gothic&family=Sansita+Swashed:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@300&family=Poppins:wght@300&family=Raleway:wght@500&display=swap');
+    </style>
+    <title>Regístrate</title>
+</head>
+<body>
+    <h1 class="first-title">¡Regístrate!</h1>
+    <span class="first-span">*Rellena sólo una sección</span>
+    <main>
+        <div class="container">
+            <div class="register-c">
+
+                <h2 class="inner-element">Para personas</h2>
+
+                <div class="mr-email inner-element">
+                    <h2>Correo electrónico</h2>
+                    <input id="email-input" type="email" autocomplete="email">
+                </div>
+                <div class="mr-password inner-element">
+                    <h2>Contraseña</h2>
+                    <input id="password-input1" type="password">
+                </div>
+                <div class="mr-confirm-password inner-element">
+                    <h2>Confirmar contraseña</h2>
+                    <input id="password-input2" type="password">
+                </div>
+                <div class="mr-showpasswords inner-element">
+                    <input class="inner-element" onclick="showPass()" id="showpass-checkbox" type="checkbox">
+                    <h3>Mostrar contraseñas</h3>
+                </div>
+                <div class="mr-register-button inner-element">
+                    <a href="login.html">Regístrate</a>
+                </div>
+                <div class="mr-login inner-element">
+                    <span>¿Ya tienes una cuenta? Inicia sesión <a href="login.html">aquí</a></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="register-c">
+
+                <h2 class="inner-element">Para instituciones</h2>
+
+                <div class="mr-email inner-element">
+                    <h2>Correo electrónico</h2>
+                    <input id="email-input" type="email" autocomplete="email">
+                </div>
+                <div class="mr-password inner-element">
+                    <h2>Contraseña</h2>
+                    <input id="password-input3" type="password">
+                </div>
+                <div class="mr-confirm-password inner-element">
+                    <h2>Confirmar contraseña</h2>
+                    <input id="password-input4" type="password">
+                </div>
+                <div class="mr-showpasswords inner-element">
+                    <input class="inner-element" onclick="showPass2()" id="showpass-checkbox" type="checkbox">
+                    <h3>Mostrar contraseñas</h3>
+                </div>
+                <div class="mr-register-button inner-element">
+                    <a href="login.html">Regístrate</a>
+                </div>
+                <div class="mr-login inner-element">
+                    <span>¿Ya tienes una cuenta? Inicia sesión <a href="login.html">aquí</a></span>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <script src="./scripts/register.js"></script>
+</body>
+</html>

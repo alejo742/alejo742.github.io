@@ -1,0 +1,277 @@
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveInDown {
+    from{
+        transform: translateY(-40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInUp {
+    from{
+        transform: translateY(40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInLeft {
+    from{
+        transform: translate(40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+@keyframes moveInRight {
+    from{
+        transform: translate(-40em);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+
+/*Fin de animaciones*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    scroll-behavior: smooth;
+} 
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--colorPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+:root{
+    --colorPrimario: #45536d;
+    --colorPrimarioT: rgba(69, 83, 109, 0.9);
+
+    --colorEnPrimario: #FFFFFF;
+    --colorEnPrimarioT: rgba(244, 244, 244, 0.9);
+    
+    --colorSecundario: #af790c;
+    --colorSecundarioT: rgba(175, 121, 12, 0.9);
+
+    --marronClaro: rgb(140, 107, 72);
+    --azulOscuro: rgb(36, 47, 68);
+    --blanco: rgb(255, 255, 255);
+}
+
+/*Fin de estilos generales*/
+
+.first-title{
+    margin: 1rem auto;
+    color: var(--colorEnPrimario);
+    font-size: 3em;
+    animation-name: moveInDown;
+    animation-duration: 1.5s;
+}
+.first-span {
+    margin: 0 auto;
+    color: var(--colorEnPrimario);
+    animation-name: moveInDown;
+    animation-duration: 1.5s;
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90vw;
+    height: 80vh;
+    margin: 0 auto;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.register-c {
+    margin: 0 auto;
+    width: 60%;
+    height: 90%;
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation-name: moveInUp;
+    animation-duration: 2s;
+}
+.inner-element {
+    margin: 1rem auto;
+    width: 90%;
+}
+h2.inner-element {
+    font-size: 2em;
+    text-align: center;
+    margin: 1rem 1rem 2rem 1rem;
+}
+input {
+    width: 80%;
+    margin: 0.5em 0 0 0;
+    height: 2em;
+    padding: 1em;
+}
+.mr-showpasswords {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+}
+.mr-showpasswords input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    height: 1.5em;
+    width: 1.5em;
+}
+.mr-showpasswords h3 {
+    margin: 0 0 0 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mr-register-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.mr-register-button a{
+    margin: 0 auto;
+    padding: 1em;
+    background-color: var(--colorSecundario);
+    color: var(--colorEnPrimario);
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: font-size, 0.5s;
+}
+.mr-register-button a:hover{
+    background-color: var(--colorSecundarioT);
+    font-size: 1.7em;
+}
+.mr-login {
+    font-size: 1.2em;
+}
+.mr-login span a {
+    text-decoration: underline;
+    color: var(--colorPrimario);
+}
+.mr-login span a:hover {
+    cursor: pointer;
+    color: var(--colorSecundario);
+}
+
+/*Media queries*/
+
+@media (hover: none) {
+    header {
+      opacity: 1;
+    }
+  }
+@media (max-width: 2100px) {
+    html{
+        font-size: 112.5%;
+    }
+}
+@media (max-width: 2000px) {
+    html{
+        font-size: 106.25%;
+    }
+}
+@media (max-width: 1900px) {
+    html{
+        font-size: 100%;
+    }
+}
+@media (max-width: 1800px) {
+    html{
+        font-size: 93.75%;
+    }
+}
+@media (max-width: 1700px) {
+    html{
+        font-size: 87.5%;
+    }
+}
+@media (max-width: 1600px) {
+    html{
+        font-size: 81.25%;
+    }
+}
+@media (max-width: 1500px) {
+    html{
+        font-size: 75%;
+    }
+}
+@media (max-width: 1400px) {
+    html{
+        font-size: 68.75%;
+    }
+}
+@media (max-width: 1200px) {
+    html{
+        font-size: 56.25%;
+    }
+}
+@media (max-width: 1100px) {
+    html{
+        font-size: 50%;
+    }
+}
+@media (max-width: 1000px) {
+    html{
+        font-size: 43.75%;
+    }
+}
+@media (max-width: 900px) {
+    html{
+        font-size: 37.5%;
+    }
+}
+@media (max-width: 800px) {
+    html{
+        font-size: 31.25%;
+    }
+}
+@media (max-width: 700px) {
+    html{
+        font-size: 25%;
+    }
+}
