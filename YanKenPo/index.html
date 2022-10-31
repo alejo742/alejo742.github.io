@@ -20,7 +20,7 @@
         </div>
         <div class="container">
             <div>
-                <a href="">Portafolio</a>
+                <a href="../index.html">Portafolio</a>
                 <a href="">Sobre mí</a>
             </div>
         </div>
@@ -31,7 +31,7 @@
             <h1>Piedra, papel <br>o tijeras</h1>
             <span>El juego clásico</span>
             <div>
-                <a id="play">Juega ahora</a>
+                <a onclick="showGame()" id="play">Juega ahora</a>
                 <a target="_blank" href="https://github.com/alejo742/alejo742.github.io/tree/master/YanKenPo" id="code">Mira el código</a>
             </div>
         </div>
@@ -46,11 +46,45 @@
                 <img src="./res/tijera.png" alt="">
             </div>
         </div>
-    </main>
 
-    <div id="game" onclick="showGame()">
+        <div id="game" class="game">
+
+            <div class="player">
+            
+                <div class="choices">
+                    <h2 class="subtitle">Tu elección:</h2>
+                    <div class="options">
+                        <div class="opcion" id="piedra">
+                            <img src="./res/piedrita.png" alt="">
+                            <span>Piedra</span>
+                        </div>
+                        <div class="opcion" id="papel">
+                            <img src="./res/papelito.png" alt="">
+                            <span>Papel</span>
+                        </div>
+                        <div class="opcion" id="tijera">
+                            <img src="./res/tijerita.png" alt="">
+                            <span>Tijera</span>
+                        </div>
+                        <div class="opcion" id="aleatorio">
+                            <img src="./res/aleatorio.png" alt="?">
+                            <span>Aleatorio</span>
+                        </div>
+                    </div>
+                    <a onclick="runChoices()" class="send-button">Enviar</a>
+                </div>
     
-    </div>
+            </div>
+    
+            <div class="computer">
+                <h2 class="subtitle">Mi elección:</h2>
+                <div id="comp-election">
+                    <img id="comp-image" src="./res/aleatorio.png" alt="">
+                    <p id="comp-text">Aleatorio</p>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <footer></footer>
     

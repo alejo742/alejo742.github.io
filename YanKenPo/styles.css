@@ -49,6 +49,14 @@
         transform: translate(0rem);
     }
 }
+@keyframes moveOutRight {
+    from{
+        transform: translate(0rem);
+    }
+    to{
+        transform: translate(200rem);
+    }
+}
 @keyframes oscilate1 {
     from{
         transform: translateY(0rem);
@@ -75,7 +83,7 @@
     animation-name: fadeIn;
     animation-duration: 1s;
     scroll-behavior: smooth;
-    border: 1p dotted var(--colorSecundarioT);
+    border: 1px dotted var(--colorSecundarioT);
     transition: all 0.5s;
 } 
 html{
@@ -157,7 +165,7 @@ header {
 
 main {
     width: 100vw;
-    min-height: 85vh;
+    height: 85vh;
     display: grid;
     grid-template-columns: 4fr 5fr;
 }
@@ -230,7 +238,7 @@ main {
     padding: 1rem;
 }
 #right #right-1 > img {
-    animation: oscilate1 2s ease-in-out infinite alternate;
+    animation: oscilate1 4s ease-out infinite alternate;
 }
 #right #right-2 {
     display: flex;
@@ -239,7 +247,7 @@ main {
     padding: 1rem;
 }
 #right #right-2 > img {
-    animation: oscilate2 3.5s ease-in infinite alternate;
+    animation: oscilate2 5s ease-in infinite alternate;
 }
 #right #right-3 {
     display: flex;
@@ -248,85 +256,114 @@ main {
     padding: 1rem;
 }
 #right #right-3 > img {
-    animation: oscilate1 3s ease-out infinite alternate;
+    animation: oscilate1 2s ease-in-out infinite alternate;
 }
 #right > div > img {
     max-width: 100%;
 }
 
-#game {
+.game {
+    height: 75vh;
+    width: 100vw;
     display: none;
+    grid-template-columns: 1fr 1fr;
 }
+.game > * {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 10rem;
+}
+.choices {
+    height: 75vh;
+    display: grid;
+    grid-template-rows: 1fr 5fr 1fr;
+}
+.choices > * {
+    margin: 1rem auto;
+}
+.subtitle {
+    margin: 0 auto;
+    font-size: var(--subtitulo);
+    text-align: center;
+}
+.options {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.opcion{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid var(--colorSecundario);
+    width: 100%;
+    height: 100%;
+}
+.opcion:hover {
+    cursor: pointer;
+    font-size: var(--titulo);
+}
+.opcion img {
+    margin: 1rem auto;
+    width: 35%;
+}
+.opcion span {
+    margin: 1rem auto;
+    font-size: var(--texto);
+}
+.send-button {
+    padding: 1rem;
+    margin: 1rem auto;
+    width: 30%;
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--texto);
+    color: var(--colorPrimario);
+    background-color: var(--colorSecundario);
+}
+.send-button:hover {
+    cursor: pointer;
+    font-size: calc(1.15*var(--texto));
+}
+
+.computer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.computer > * {
+    margin: 2rem auto;
+}
+.comp-election {
+    margin: 0 auto;
+    width: 100%;
+    height: fit-content;
+    margin: 1rem auto;
+    font-size: var(--texto);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#comp-image {
+    margin: 1rem auto;
+    width: 50%;
+    height: auto;
+    border: 1px solid var(--colorSecundario);
+}
+#comp-text {
+    margin: 1rem auto;
+    font-size: var(--texto);
+    text-align: center;
+}
+
 
 /*Media queries*/
 
-@media (max-width: 2100px) {
-    html{
-        font-size: 112.5%;
-    }
-}
-@media (max-width: 2000px) {
-    html{
-        font-size: 106.25%;
-    }
-}
-@media (max-width: 1900px) {
-    html{
-        font-size: 100%;
-    }
-}
-@media (max-width: 1800px) {
-    html{
-        font-size: 93.75%;
-    }
-}
-@media (max-width: 1700px) {
-    html{
-        font-size: 87.5%;
-    }
-}
-@media (max-width: 1600px) {
-    html{
-        font-size: 81.25%;
-    }
-}
-@media (max-width: 1500px) {
-    html{
-        font-size: 75%;
-    }
-}
-@media (max-width: 1400px) {
-    html{
-        font-size: 68.75%;
-    }
-}
-@media (max-width: 1200px) {
-    html{
-        font-size: 56.25%;
-    }
-}
-@media (max-width: 1100px) {
-    html{
-        font-size: 50%;
-    }
-}
-@media (max-width: 1000px) {
-    html{
-        font-size: 43.75%;
-    }
-}
-@media (max-width: 900px) {
-    html{
-        font-size: 37.5%;
-    }
-}
-@media (max-width: 800px) {
-    html{
-        font-size: 31.25%;
-    }
-}
-@media (max-width: 700px) {
-    html{
-        font-size: 25%;
-    }
-}
