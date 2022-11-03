@@ -42,7 +42,6 @@ const opciones = document.querySelectorAll('.opcion');
 var o1 = opciones[0];
 var o2 = opciones[1];
 var o3 = opciones[2];
-var o4 = opciones[3];
 let selected = null;
 let aleatorio = false;
 
@@ -53,8 +52,7 @@ opciones.forEach(opcion => {
                 o1.style.borderWidth = '8px'
                 o2.style.borderWidth = '1px'
                 o3.style.borderWidth = '1px'
-                o4.style.borderWidth = '1px'
-                selected = 0
+                selected = 'piedra'
                 aleatorio = false
             }
         }
@@ -63,8 +61,7 @@ opciones.forEach(opcion => {
                 o1.style.borderWidth = '1px'
                 o2.style.borderWidth = '8px'
                 o3.style.borderWidth = '1px'
-                o4.style.borderWidth = '1px'
-                selected = 1
+                selected = 'papel'
                 aleatorio = false
             }
         }
@@ -73,68 +70,62 @@ opciones.forEach(opcion => {
                 o1.style.borderWidth = '1px'
                 o2.style.borderWidth = '1px'
                 o3.style.borderWidth = '8px'
-                o4.style.borderWidth = '1px'
-                selected = 2
+                selected = 'tijera'
                 aleatorio = false
-            }
-        }
-        else{
-            if(opcion.style.borderWidth != '8px'){
-                o1.style.borderWidth = '1px'
-                o2.style.borderWidth = '1px'
-                o3.style.borderWidth = '1px'
-                o4.style.borderWidth = '8px'
-                aleatorio = true
             }
         }
     }
     opcion.addEventListener('click', select)
 })
 
-
 let playerWins = 0
 let compWins = 0
 var ganador = null
 
 function runChoices(){
-    var computerChoice = Math.floor(Math.random()*3)
+    var computerChoice = compText.innerHTML.toLowerCase()
     var userChoice = selected
-    if(aleatorio) {
-        userChoice = Math.floor(Math.random()*3)
-    }
+    
     console.log(`/Escogiste ${userChoice}`)
     console.log(`Yo escogí ${computerChoice}`)
 
     //Comparar elecciones
     if(userChoice == computerChoice) {
         alert('¡Es un empate!')
+        numAleatorio = 0
     }
     else {
-        if(userChoice==0 && computerChoice == 1){
-            compWins ++
-            alert('¡Gano yo!')
-        }
-        else if(userChoice==1 && computerChoice == 0){
-            playerWins ++
-            alert('Ganas tú...')
-        }
+        if(userChoice=='piedra' && computerChoice == 'papel'){
+        compWins ++
+        alert('¡Gano yo!')
+        numAleatorio = 0
+    }
+    else if(userChoice=='papel' && computerChoice == 'piedra'){
+        playerWins ++
+        alert('Ganas tú...')
+        numAleatorio = 0
+    }
 
-        else if(userChoice==1 && computerChoice == 2){
-            compWins ++
-            alert('¡Gano yo!')
-        }
-        else if(userChoice==2 && computerChoice == 1){
-            playerWins ++
-            alert('Ganas tú...')
-        }
+    else if(userChoice=='papel' && computerChoice == 'tijera'){
+        compWins ++
+        alert('¡Gano yo!')
+        numAleatorio = 0
+    }
+    else if(userChoice=='tijera' && computerChoice == 'papel'){
+        playerWins ++
+        alert('Ganas tú...')
+        numAleatorio = 0
+    }
 
-        else if(userChoice==2 && computerChoice == 0){
-            compWins ++
-            alert('¡Gano yo!')
-        }
-        else if(userChoice==0 && computerChoice == 2){
-            playerWins ++
-            alert('Ganas tú...')
-        }
+    else if(userChoice=='tijera' && computerChoice == 'piedra'){
+        compWins ++
+        alert('¡Gano yo!')
+        numAleatorio = 0
+    }
+    else if(userChoice=='piedra' && computerChoice == 'tijera'){
+        playerWins ++
+        alert('Ganas tú...')
+        numAleatorio = 0
+    }
     }
 }

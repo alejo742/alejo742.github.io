@@ -73,6 +73,23 @@
         transform: translateY(0rem);
     }
 }
+@keyframes oscilateLittle1 {
+    from{
+        transform: translateY(1rem);
+    }
+    to {
+        transform: translateY(0rem);
+    }
+}
+@keyframes oscilateLittle2 {
+    from{
+        transform: translateY(0rem);
+    }
+    to {
+        transform: translateY(1rem);
+    }
+}
+
 
 /*Fin de animaciones*/
 
@@ -112,10 +129,10 @@ html, body {
     --colorSecundario: rgb(0, 185, 169);
     --colorSecundarioT: rgb(0, 185, 169, 0.7);
 
-    --texto: 1.5rem;
-    --subtitulo: 2.5rem;
-    --titulo: 3.5rem;
-    --banner: 5rem;
+    --texto: 1.2vw;
+    --subtitulo: 2.2vw;
+    --titulo: 3vw;
+    --banner: 4vw;
 }
 
 /*Fin de estilos generales*/
@@ -342,6 +359,19 @@ main {
     opacity: 0.8;
 }
 
+#piedra img {
+    animation: oscilateLittle1 2s ease-in-out infinite alternate;
+}
+#papel img {
+    animation: oscilateLittle2 2.5s ease-in infinite alternate;
+}
+#tijera img {
+    animation: oscilateLittle2 2s ease-in-out infinite alternate;
+}
+#aleatorio img {
+    animation: oscilateLittle1 2.5s ease-out infinite alternate;
+}
+
 .computer {
     width: 100%;
     height: 100%;
@@ -353,6 +383,7 @@ main {
     margin: 3rem auto 1rem auto;
     width: 30%;
     height: auto;
+    animation: oscilateLittle2 1.5s ease-in infinite alternate;
 }
 #comp-text {
     margin: 1rem auto;
