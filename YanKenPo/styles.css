@@ -124,10 +124,10 @@ html, body {
     --colorPrimarioT: rgba(244, 242, 239, 0.8);
 
     --colorEnPrimario: rgb(61, 72, 80);
-    --colorEnPrimarioT: rgb(146, 150, 153);
+    --colorEnPrimarioT: rgba(146, 150, 153, 0.8);
     
     --colorSecundario: rgb(0, 185, 169);
-    --colorSecundarioT: rgb(0, 185, 169, 0.7);
+    --colorSecundarioT: rgba(0, 185, 169, 0.7);
 
     --texto: 1.2vw;
     --subtitulo: 2.2vw;
