@@ -154,7 +154,7 @@ header {
 }
 .container h2 {
     font-size: var(--banner);
-    font-family: 'Dancing Script', sans-serif;
+    font-family: 'Dancing Script', Arial, Helvetica, sans-serif;
     color: var(--colorEnPrimarioT);
 }
 .container > div {
