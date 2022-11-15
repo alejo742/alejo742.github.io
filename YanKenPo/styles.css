@@ -152,9 +152,10 @@ header {
     flex-direction: column;
     justify-content: center;
 }
-.container img {
-    height: 100%;
-    margin: 0 auto;
+.container h2 {
+    font-size: var(--banner);
+    font-family: 'Dancing Script', sans-serif;
+    color: var(--colorEnPrimarioT);
 }
 .container > div {
     margin: 0 15rem 0 15rem;

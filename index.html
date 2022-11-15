@@ -16,51 +16,174 @@
 
     <header id="header">
         <div class="container">
-            <img src="./res/logoAM4.png" alt="AM">
+            <h2>AM</h2>
         </div>
     </header>
 
-    <main>
-        <div class="left">
+    <main id="main">
+        <div class="intro">
             <h2>Hola, soy</h2>
-            <div class="left-text">
-                <h1>Alejandro</h1>
-                <div></div>
+            <div class="intro-text">
+                <h1>Alejandro<strong>.</strong> </h1>
             </div>
             <p class="main-desc">
                 Un entusiasta estudiante y desarrollador web front-end con conocimientos básicos de backend, y de aplicaciones móviles Android, que además domina el idioma inglés y tiene múltiples reconocimientos.
             </p>
-            <span class="left-inv">Echa un vistazo</span>
-            <div class="left-underline"></div>
+            <a href="#skills" class="intro-inv">> Echa un vistazo</a>
+            <div class="intro-inv-underline"></div>
         </div>
+        <div id="skills" class="skills">
+            <section class="skills-titles">
+                <h3>Mis habilidades</h3>
+                <h2>Desarrollo Web, de Apps e Interfaces</h2>
+                <a href="#skill-list" class="skills-inv">> Mi listado de habilidades</a>
+                <div class="skills-inv-underline"></div>
+            </section>
+            <section class="skills-desc">
+                <p>Me especializo en construir aplicaciones y páginas web con interfaces atractivas, amigables, interactivas y responsive, aunque también soy capaz de crear aplicaciones de Android y conectar de manera básica con los servidores.</p>
+            </section>
+        </div>
+        <div id="skill-list" class="skill-list">
+            <h2> <strong>-</strong> Habilidades Profesionales</h2>
+            <section id="skills-container-1" class="skills-container">
+                <div>
+                    <section>
+                        <h3 id="pskill-1">HTML</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Maquetación</li>
+                        <li>Buenas prácticas</li>
+                        <li>Atributos</li>
+                        <li>SEO</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <section>
+                        <h3 id="pskill-2">CSS</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Estilado</li>
+                        <li>Buenas prácticas</li>
+                        <li>Diseño responsive</li>
+                        <li>Animaciones</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <section>
+                        <h3 id="pskill-3">JavaScript</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Sintaxis</li>
+                        <li>Buenas prácticas</li>
+                        <li>Conexión con DOM</li>
+                        <li>React.js y Express.js</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <section>
+                        <h3 id="pskill-4">Kotlin</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Sintaxis</li>
+                        <li>Buenas prácticas</li>
+                        <li>Uso en IDE</li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <section>
+                        <h3 id="pskill-5">XML</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Maquetación</li>
+                        <li>Buenas prácticas</li>
+                        <li>Estilado</li>
+                        <li>Diseño responsive</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <section>
+                        <h3 id="pskill-6">Inglés</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Intermedio Alto</li>
+                        <li>Certificado Intl.</li>
+                        <li>Fluidez</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+            <h2> <strong>-</strong> Habilidades Sociales</h2>
+            <section id="skills-container-2" class="skills-container">
+                <div>
+                    <section>
+                        <h3 id="sskill-1">Trabajo en equipo</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Escucha activa</li>
+                        <li>Flexibilidad</li>
+                        <li>Atributos</li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <section>
+                        <h3 id="sskill-2">Liderazgo</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Enfoque</li>
+                        <li>Iniciativa</li>
+                        <li>Carisma</li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <section>
+                        <h3 id="sskill-3">Gestión del tiempo</h3>
+                        <img src="" alt="">
+                    </section>
+                    <ul>
+                        <li>Organización</li>
+                        <li>Responsabilidad</li>
+                        <li>Productividad</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <div class="projects">
+            <section class="projects-left">
+                <h2>Mis<br>Proyectos <strong>+</strong></h2>
+                <div class="project">
+                    <h3 class="project-name"></h3>
+                </div>
+                <div class="change-projects">
+                    <a id="projects-arrow-left" class="projects-arrow" onclick="changeProjects()"><</a>
+                    <a id="projects-arrow-right" class="projects-arrow" onclick="changeProjects()">></a>
+                </div>
+            </section>
+            
+            <section class="projects-right">
+                
+            </section>
+        </div>
+        <div id="career" class="career"></div>
     </main>
-
-    <footer>
-        <nav>
-            <a class="button" onclick="">
-                <img src="./res/home/primIcons/habilidades.svg" alt="">
-                <span>Habilidades</span>
-            </a>
-            <div class="nav-sep"></div>
-
-            <a class="button" onclick="">
-                <img src="./res/home/primIcons/proyectos.svg" alt="">
-                <span>Proyectos</span>
-            </a>
-            <div class="nav-sep"></div>
-
-            <a class="button" onclick="">
-                <img src="./res/home/primIcons/reconocimientos.svg" alt="">
-                <span>Reconocimientos</span>
-            </a>
-            <div class="nav-sep"></div>
-
-            <a class="button" onclick="">
-                <img src="./res/home/primIcons/persona.svg" alt="">
-                <span>Sobre mí</span>
-            </a>
-        </nav>
-    </footer>
 
     <script src="script.js"></script>
 </body>
