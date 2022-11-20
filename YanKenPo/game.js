@@ -32,7 +32,12 @@ function showGame() {
         header.style.display = 'none'
         left.style.display = 'none'
         right.style.display = 'none'
-        juego.style.display = 'grid'
+        if(right.style.gridTemplateColumns=='none'){
+            juego.style.display='flex'
+        }
+        else {
+            juego.style.display = 'grid'
+        }
     }
     setTimeout(game, 2500)
     setTimeout(changeCompSelection, 3000)

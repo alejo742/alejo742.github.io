@@ -27,7 +27,7 @@
 }
 @keyframes moveInUp {
     from{
-        transform: translateY(40em);
+        transform: translateY(100vh);
     }
     to{
         transform: translateY(0em);
@@ -35,7 +35,7 @@
 }
 @keyframes moveInLeft {
     from{
-        transform: translate(40em);
+        transform: translate(100vw);
     }
     to{
         transform: translate(0em);
@@ -43,7 +43,7 @@
 }
 @keyframes moveInRight {
     from{
-        transform: translate(-40em);
+        transform: translate(-100vw);
     }
     to{
         transform: translate(0em);
@@ -88,6 +88,7 @@
 } 
 html{
     font-size: 62.5%;
+    orientation: landscape;
 }
 body{
     width: 100vw;
@@ -104,6 +105,9 @@ html, body {
     padding: 0;
     box-sizing: border-box;
 }
+h1,h2 {
+    letter-spacing: -1px;
+}
 p{
     font-family: 'Nunito', sans-serif;
     line-height: 4vh;
@@ -118,10 +122,10 @@ p{
     --colorSecundario: #5f98fe;
     --colorSecundarioT: rgba(95, 152, 254, 0.7);
 
-    --texto: 1.4vw;
-    --subtitulo: 2.5vw;
-    --titulo: 3.5vw;
-    --banner: 5vw;
+    --texto: clamp(1.2rem, 0.7153rem + 1.64vw, 1.8rem);
+    --subtitulo: clamp(2.4rem, 1.4rem + 3.2vw, 3.6rem);
+    --titulo: clamp(3rem, 2rem + 4vw, 6rem);
+    --banner: clamp(4rem, 2.5rem + 4.5vw, 7.5rem);
 }
 
 /*Fin de estilos generales*/
@@ -407,36 +411,43 @@ main {
 .projects-left h2 {
     font-size: var(--titulo);
     white-space: nowrap;
+    margin: 0 0 5vh 0;
 }
 .projects-left h2 strong {
     font-size: var(--subtitulo);
     color: var(--colorSecundario);
 }
 .project {
-    height: 50vh;
-    width: 100%;
-}
-.change-projects {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-.projects-arrow {
-    height: 15vh;
-    width: 15vh;
-    margin: 3vh 2vw;
-    padding: 5vh;
-    border: 0.2vw solid var(--colorSecundario);
-    border-radius: 100%;
-    font-size: var(--subtitulo);
-    font-family: monospace;
-    text-align: center;
+    height: calc(var(--banner)*5);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
+    font-size: var(--texto);
+    margin: 2vh auto;
+    border-radius: 5%;
+    text-decoration: none;
 }
-.projects-arrow:hover {
-    background-color: rgba(95, 152, 254, 0.1);
-    cursor: pointer;
-} 
+.project h3{
+    margin: 0 auto 4vh auto;
+    white-space: nowrap;
+    color: var(--colorEnPrimario);
+    text-decoration: none;
+    font-size: calc(var(--texto)*1.2);
+    display: none;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, 0));;
+}
+.project h3 strong {
+    color: var(--colorSecundario);
+}
+.project:hover h3 {
+    display: flex;
+}
