@@ -431,7 +431,7 @@ main {
     text-decoration: none;
 }
 .project h3{
-    margin: 0 auto 4vh auto;
+    margin: 0 auto 0 auto;
     white-space: nowrap;
     color: var(--colorEnPrimario);
     text-decoration: none;

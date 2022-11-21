@@ -1,0 +1,223 @@
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    75%{
+        opacity: 0.9;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes moveInDown {
+    from{
+        transform: translateY(-40em);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInUp {
+    from{
+        transform: translateY(100vh);
+    }
+    to{
+        transform: translateY(0em);
+    }
+}
+@keyframes moveInLeft {
+    from{
+        transform: translate(100vw);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+@keyframes moveInRight {
+    from{
+        transform: translate(-100vw);
+    }
+    to{
+        transform: translate(0em);
+    }
+}
+@keyframes moveOutRight {
+    from{
+        transform: translate(0rem);
+    }
+    to{
+        transform: translate(100vw);
+    }
+}
+@keyframes oscilate {
+    from{
+        transform: translateY(5vh);
+    }
+    to {
+        transform: translateY(0rem);
+    }
+}
+@keyframes oscilateLittle {
+    from{
+        transform: translateY(1vh);
+    }
+    to {
+        transform: translateY(0rem);
+    }
+}
+
+/*Fin de animaciones*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    scroll-behavior: smooth;
+    border: 1p dotted var(--colorSecundario);
+    transition: all 0.5s;
+} 
+html{
+    font-size: 62.5%;
+    orientation: landscape;
+}
+body{
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: sans-serif;
+    background-color: var(--colorPrimario);
+    color: var(--colorEnPrimario);
+    display: flex;
+    flex-direction: column;
+}
+html, body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1,h2 {
+    color: var(--colorSecundario);
+    letter-spacing: -1px;
+}
+p{
+    font-family: 'Nunito', sans-serif;
+    line-height: 2vh;
+}
+:root{
+    --colorPrimario: #fff;
+
+    --colorEnPrimario: rgb(0, 0, 0);
+
+    --colorSecundario: #701a65;
+
+    --texto: clamp(1.2rem, 0.7153rem + 1.64vw, 1.8rem);
+    --subtitulo: clamp(2.4rem, 1.4rem + 3.2vw, 3.6rem);
+    --titulo: clamp(3rem, 2rem + 4vw, 6rem);
+    --banner: clamp(4rem, 2.5rem + 4.5vw, 7.5rem);
+}
+
+/*Fin de estilos generales*/
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    gap: 4vw;
+}
+.left {
+    width: 100%;
+    height: 100%;
+    background-color: var(--colorPrimario);
+    background-image: url('../res/projectMinis/luka\ mini.png');
+    background-size: cover;
+    background-position: center;
+}
+.left h1 {
+    margin: 0 auto;
+    text-align: center;
+    font-size: calc(var(--banner)*3.5);
+    letter-spacing: -1vw;
+    user-select: none;
+}
+.left span {
+    font-size: var(--texto);
+    width: 100%;
+    margin: 2vh auto;
+    text-align: center;
+}
+.right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--colorPrimario);
+}
+.right nav {
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+}
+.right nav .link.title {
+    font-size: var(--subtitulo);
+    color: var(--colorSecundario);
+    font-weight: bold;
+    font-family: 'Dancing Script', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+}
+.right nav .link.title:hover {
+    font-size: calc(var(--subtitulo)*1.2);
+}
+.right > h2 {
+    font-size: var(--titulo);
+    max-width: 90%;
+    margin: 4vh 0;
+}
+.right > p {
+    font-size: var(--texto);
+    max-width: 80%;
+    line-height: normal;
+    margin: 4vh 0;
+    opacity: 0.8;
+}
+.right > span {
+    font-size: var(--texto);
+}
+.right > div {
+    max-height: 100%;
+    width: 100%;
+    margin: 10vh 0;
+}
+.right > div a {
+    background-color: var(--colorSecundario);
+    font-size: var(--texto);
+    color: var(--colorPrimario);
+    text-decoration: none;
+    padding: 1vw 1.5vw;
+    border-radius: 1vw 1vw 1vw 1vw;
+}
+
+/*Media queries*/
+
+@media (max-width: 770px) {
+    main{
+        grid-template-columns: 4fr 5fr;
+    }
+    .right > div a {
+        padding: 2vw 2.5vw;
+    }
+}
