@@ -73,6 +73,23 @@
         transform: translateY(0rem);
     }
 }
+@keyframes makeBig {
+    from {
+        transform: scale(0.5);
+    }
+    to{
+        transform: none;
+    }
+}
+@keyframes makeSmall {
+    from {
+        transform: none;
+    }
+    to{
+        transform: scale(0.5);
+    }
+}
+
 
 /*Fin de animaciones*/
 
@@ -108,7 +125,8 @@ html, body {
 h1,h2 {
     letter-spacing: -1px;
 }
-p{
+p, span{
+    font-size: var(--texto);
     font-family: 'Nunito', sans-serif;
     line-height: 4vh;
 }
@@ -153,6 +171,7 @@ header {
     font-family: 'Dancing Script', sans-serif;
 }
 
+/*landing*/
 
 main {
     margin: 2.5vh auto;
@@ -217,6 +236,8 @@ main {
     width: 40%;
 }
 
+/*Resumen*/
+
 .skills {
     width: 70%;
     height: 100vh;
@@ -278,6 +299,8 @@ main {
     font-size: var(--texto);
     line-height: 4vh;
 }
+
+/*Habilidades*/
 
 .skill-list {
     width: 70%;
@@ -395,11 +418,11 @@ main {
     transform: translate(-4vw, -6.5vh);
 }
 
+/*Proyectos*/
 
 .projects{
     margin: 0 auto;
     width: 70%;
-    height: 110vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2vw;
@@ -450,4 +473,137 @@ main {
 }
 .project:hover h3 {
     display: flex;
+}
+
+/*Carrera*/
+
+.career {
+    margin: 5vh auto;
+    width: 70%;
+    height: 150vh;
+}
+.career-top{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.career-top h2 {
+    font-size: var(--titulo);
+    white-space: nowrap;
+    margin: 0 0 5vh 0;
+}
+.career-top h2 strong {
+    font-size: var(--subtitulo);
+    color: var(--colorSecundario);
+}
+.career-top > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.career-top > div > div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.cv-inv{
+    margin: 4vh 0 0 0;
+    font-size: calc(var(--texto)/1.3);
+    text-transform: uppercase;
+    color: var(--colorEnPrimario);
+    font-family: monospace;
+    max-width: 40%;
+    padding: 2vh 2vh 2vh 0;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.cv-inv:hover{
+    background-color: rgba(95, 152, 254, 0.05);
+    cursor: pointer;
+    padding-left: 1vw;
+}
+.cv-inv-underline{
+    margin: 0;
+    background-color: var(--colorSecundario);
+    height: 0.1vw;
+    width: 40%;
+}
+
+.career-wrap {
+    width: 100%;
+    height: 130vh;
+    display: grid;
+    grid-template-columns: 3fr 1fr 3fr;
+}
+
+.career-line {
+    display: flex;
+    flex-direction: column;
+}
+.career-line > * {
+    margin: 0 auto;
+}
+.c-line{
+    width: 0.2vw;
+    height: 50vh;
+    background-color: var(--colorEnPrimario);
+}
+.c-circle {
+    width: 2.5vh;
+    height: 2.5vh;
+    background-color: var(--colorSecundario);
+    border-radius: 100%;
+}
+.career-c {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20vh 0;
+}
+.achievement {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    outline: 0 solid var(--colorEnPrimario);
+    opacity: 0.6;
+}
+.achievement > * {
+    margin: 1vh auto;
+}
+.achievement img {
+    max-height: 40%;
+}
+.achievement h3 {
+    color: var(--colorSecundario);
+    text-transform: uppercase;
+    font-size: var(--texto);
+    max-width: 70%;
+    text-align: center;
+}
+.achievement span{
+    color: var(--colorEnPrimario);
+    font-size: calc(var(--texto)*0.8);
+    max-width: 90%;
+    opacity: 0.8;
+}
+.achievement p {
+    color: var(--colorEnPrimario);
+    font-size: var(--texto);
+    max-width: 80%;
+    text-align: center;
+}
+.achievement.visible:hover {
+    cursor: pointer;
+    outline-width: 0.2vw;
+    border-radius: 1vh 1vh 1vh 1vh;
+    opacity: 1;
+}
+.achievement.hidden {
+    visibility: hidden;
 }

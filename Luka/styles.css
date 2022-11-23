@@ -178,6 +178,7 @@ main {
     flex-direction: column;
     justify-content: center;
     text-decoration: none;
+    user-select: none;
 }
 .right nav .link.title:hover {
     font-size: calc(var(--subtitulo)*1.2);
@@ -186,6 +187,7 @@ main {
     font-size: var(--titulo);
     max-width: 90%;
     margin: 4vh 0;
+    user-select: none;
 }
 .right > p {
     font-size: var(--texto);
@@ -209,6 +211,10 @@ main {
     text-decoration: none;
     padding: 1vw 1.5vw;
     border-radius: 1vw 1vw 1vw 1vw;
+}
+.right > div a:hover {
+    margin-left: 2vw;
+    opacity: 0.9;
 }
 
 /*Media queries*/
