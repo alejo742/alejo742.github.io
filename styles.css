@@ -295,6 +295,7 @@ header {
 
 .skill-list {
     width: 70%;
+    height: 160vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -413,6 +414,7 @@ header {
 .projects{
     margin: 0 auto;
     width: 70%;
+    height: 120vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2vw;
@@ -470,6 +472,9 @@ header {
 .career {
     margin: 5vh auto;
     width: 70%;
+    height: 350vh;
+    display: flex;
+    flex-direction: column;
 }
 .career-top{
     display: grid;
@@ -523,9 +528,9 @@ header {
 
 .career-wrap {
     width: 100%;
-    height: 130vh;
     display: grid;
     grid-template-columns: 3fr 1fr 3fr;
+    gap: 1vw;
 }
 
 .career-line {
