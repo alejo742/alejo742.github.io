@@ -6,28 +6,9 @@
         opacity: 1;
     }
 }
-@keyframes fadeOut {
-    0%{
-        opacity: 1;
-    }
-    75%{
-        opacity: 0.9;
-    }
-    100%{
-        opacity: 0;
-    }
-}
-@keyframes moveInDown {
-    from{
-        transform: translateY(-40em);
-    }
-    to{
-        transform: translateY(0em);
-    }
-}
 @keyframes moveInUp {
     from{
-        transform: translateY(100vh);
+        transform: translateY(10vh);
     }
     to{
         transform: translateY(0em);
@@ -39,38 +20,6 @@
     }
     to{
         transform: translate(0em);
-    }
-}
-@keyframes moveInRight {
-    from{
-        transform: translate(-100vw);
-    }
-    to{
-        transform: translate(0em);
-    }
-}
-@keyframes moveOutRight {
-    from{
-        transform: translate(0rem);
-    }
-    to{
-        transform: translate(100vw);
-    }
-}
-@keyframes oscilate {
-    from{
-        transform: translateY(5vh);
-    }
-    to {
-        transform: translateY(0rem);
-    }
-}
-@keyframes oscilateLittle {
-    from{
-        transform: translateY(1vh);
-    }
-    to {
-        transform: translateY(0rem);
     }
 }
 @keyframes makeBig {
@@ -89,7 +38,20 @@
         transform: scale(0.5);
     }
 }
-
+@keyframes invAnimation {
+    0% {
+        transform: translateY(10vh);
+        opacity: 0;
+    }
+    75% {
+        transform: translateY(5vh);
+        opacity: 0.4;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
 
 /*Fin de animaciones*/
 
@@ -97,8 +59,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    animation-name: fadeIn;
-    animation-duration: 1s;
     scroll-behavior: smooth;
     border: 1p dotted var(--colorSecundario);
     transition: all 0.5s;
@@ -113,6 +73,9 @@ body{
     font-family: sans-serif;
     background-color: var(--colorPrimario);
     color: var(--colorEnPrimario);
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
 }
 html, body {
     margin: 0 auto;
@@ -132,7 +95,7 @@ p, span{
     --colorPrimarioT: rgba(0, 0, 0, 0.8);
 
     --colorEnPrimario: rgb(255, 255, 255);
-    --colorEnPrimarioT: rgba(255, 255, 255, 0.8);
+    --colorEnPrimarioT: rgba(255, 255, 255, 0.7);
     
     --colorSecundario: #5f98fe;
     --colorSecundarioT: rgba(95, 152, 254, 0.7);
@@ -143,7 +106,7 @@ p, span{
     --banner: clamp(4rem, 2.5rem + 4.5vw, 7.5rem);
 }
 
-/*Fin de estilos generales*/
+/*!Fin de estilos generales*/
 
 header {
     margin: 0 auto;
@@ -168,7 +131,7 @@ header {
     font-family: 'Dancing Script', sans-serif;
 }
 
-/*landing*/
+/*!landing*/
 
 .intro {
     display: flex;
@@ -181,11 +144,13 @@ header {
 .intro h2 {
     font-size: var(--subtitulo);
     margin: 0;
+    animation: moveInUp 1.5s ease-out, fadeIn 3s;
 }
 .intro h1 {
     font-size: calc(var(--banner)*1.2);
     margin: 0;
     font-family: sans-serif;
+    animation: moveInUp 2s ease-in-out, fadeIn 3.5s;
 }
 .intro-text{
     display: flex;
@@ -198,11 +163,11 @@ header {
 .main-desc{
     margin: 1.5vh 0;
     font-size: var(--texto);
-    color: var(--colorEnPrimario);
-    opacity: 0.7;
+    color: var(--colorEnPrimarioT);
     font-family: 'Nunito', sans-serif;
     max-width: 40%;
     text-align: justify;
+    animation: moveInUp 2s ease-in-out, fadeIn 3.5s;
 }
 .intro-inv{
     margin: 4vh 0 0 0;
@@ -214,6 +179,7 @@ header {
     padding: 2vh 2vh 2vh 0;
     white-space: nowrap;
     text-decoration: none;
+    animation: invAnimation 3s ease-in;
 }
 .intro-inv:hover{
     background-color: rgba(95, 152, 254, 0.05);
@@ -224,9 +190,10 @@ header {
     background-color: var(--colorSecundario);
     height: 0.1vw;
     width: 30%;
+    animation: invAnimation 3s ease-in;
 }
 
-/*Resumen*/
+/*!Resumen*/
 
 .skills {
     width: 70%;
@@ -290,7 +257,7 @@ header {
     line-height: 4vh;
 }
 
-/*Habilidades*/
+/*!Habilidades*/
 
 .skill-list {
     width: 70%;
@@ -346,7 +313,7 @@ header {
     opacity: 0.7;
     white-space: nowrap;
 }
-/*::before para habilidades*/
+/**::before para habilidades*/
 #pskill-1::before, #sskill-1::before {
     content: '01';
     position: absolute;
@@ -408,7 +375,7 @@ header {
     transform: translate(-4vw, -6.5vh);
 }
 
-/*Proyectos*/
+/*!Proyectos*/
 
 .projects{
     margin: 0 auto;
@@ -458,6 +425,7 @@ header {
     padding-bottom: 5vh;
     padding-left: 5vw;
     background: linear-gradient(to top, black, rgba(0, 0, 0, 0));;
+    animation: fadeIn 1s;
 }
 .project h3 strong {
     color: var(--colorSecundario);
@@ -466,7 +434,7 @@ header {
     display: flex;
 }
 
-/*Carrera*/
+/*!Carrera*/
 
 .career {
     margin: 5vh auto;
@@ -602,7 +570,7 @@ header {
     visibility: hidden;
 }
 
-/*Apartado de contacto*/
+/*!Apartado de contacto*/
 
 .contact {
     margin: 0 auto;
@@ -658,7 +626,7 @@ header {
     width: 30%;
 }
 
-/*Footer*/
+/*!Footer*/
 
 footer{
     height: 20vh;
@@ -684,3 +652,57 @@ footer{
     flex-direction: column;
     justify-content: center;
 }
+
+/*!Animaciones*/
+
+.reveal-up{
+    transform: translateY(20vh);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal-up.active-up{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.reveal-right{
+    transform: translateX(-10vw);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal-right.active-right{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.reveal-left{
+    transform: translateX(10vw);
+    opacity: 0;
+    transition: 2s all ease;
+}
+.reveal-left.active-left{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/*!custom scroll bar*/
+
+::-webkit-scrollbar {
+    width: 1vw;
+ }
+  
+::-webkit-scrollbar-track {
+    background: var(--colorEnPrimario);
+    box-shadow: 5px 0 0 5px var(--colorEnPrimario); 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: var(--colorSecundario); 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: var(--colorSecundarioT); 
+}
+
+/*!Media queries*/
+
