@@ -9,4 +9,3 @@ function toggleDisplay(element, value) {
 function setAnimation(element, animationName, duration) {
     element.style.animation = animationName +' '+ duration
 }
-
