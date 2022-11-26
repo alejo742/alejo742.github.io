@@ -91,45 +91,55 @@ function runChoices(){
     var computerChoice = compText.innerHTML.toLowerCase()
     var userChoice = selected
     
-    console.log(`/Escogiste ${userChoice}`)
-    console.log(`Yo escogí ${computerChoice}`)
+    function showResult(message) {
+        const popUp = document.getElementById('pop-up')
+        popUp.style.animation = 'none'
+        popUp.children[0].innerHTML = message
+        popUp.style.display = 'flex'
+        popUp.children[1].addEventListener('click', ()=>{
+            popUp.style.animation = 'fadeOut 1s'
+            setTimeout(()=>{
+                popUp.style.display = 'none'
+            }, 950)
+        })
+    }
 
     //Comparar elecciones
     if(userChoice == computerChoice) {
-        alert('¡Es un empate!')
+        showResult('¡Es un empate!')
         numAleatorio = 0
     }
     else {
         if(userChoice=='piedra' && computerChoice == 'papel'){
         compWins ++
-        alert('¡Gano yo!')
+        showResult('¡Gano yo!')
         numAleatorio = 0
     }
     else if(userChoice=='papel' && computerChoice == 'piedra'){
         playerWins ++
-        alert('Ganas tú...')
+        showResult('Ganas tú...')
         numAleatorio = 0
     }
 
     else if(userChoice=='papel' && computerChoice == 'tijera'){
         compWins ++
-        alert('¡Gano yo!')
+        showResult('¡Gano yo!')
         numAleatorio = 0
     }
     else if(userChoice=='tijera' && computerChoice == 'papel'){
         playerWins ++
-        alert('Ganas tú...')
+        showResult('Ganas tú...')
         numAleatorio = 0
     }
 
     else if(userChoice=='tijera' && computerChoice == 'piedra'){
         compWins ++
-        alert('¡Gano yo!')
+        showResult('¡Gano yo!')
         numAleatorio = 0
     }
     else if(userChoice=='piedra' && computerChoice == 'tijera'){
         playerWins ++
-        alert('Ganas tú...')
+        showResult('Ganas tú...')
         numAleatorio = 0
     }
     }
