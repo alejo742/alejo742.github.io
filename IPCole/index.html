@@ -5,138 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="icon" href="../IP2022/res/general/cybersecurity-icon-rounded.png">
+    <link rel="icon" href="./res/general/logo-cyberstop.png">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hubballi&family=Josefin+Sans:wght@400&family=League+Gothic&family=Sansita+Swashed:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@300&family=Poppins:wght@300&family=Raleway:wght@500&display=swap');
+        
     </style>
     <title>CyberStop</title>
 </head>
 
 <body>
     <header>
-        <ul class="header-ul-1">
-            <li class="header-logo-container">
-                <img src="./res/general/logo-cyberstop.png" alt="CyberStop">
-            </li>
-        </ul>
-
-        <ul class="header-ul-2">
-            <li class="header-a-container">
-                <a href="#main-section-4">Nosotros</a>
-            </li>
-            <li class="header-a-container">
-                <a href="#main-section-3">Infórmate</a>
-            </li>
-            <li class="header-a-container">
-                <a href="#main-section-2">¡Haz nuestro test!</a>
-            </li>
-            <li class="header-a-container" id="header-a-login">
-                <a href="./login.html">Inicia sesión</a>
-            </li>
-        </ul>
+        <div class="header-div-left">
+            <img src="./res/general/logo-cyberstop.png" alt="">
+            <h3>cyberstop</h3>
+        </div>
+        <div class="header-div-right">
+            <a class="h-login" href="">Inicia sesión</a>
+            <a class="h-register" href="">Regístrate</a>
+        </div>
     </header>
 
     <main>
-        <section class="main-section" id="main-section-1">
 
-            <div id="main-section-1-div">
-
-                <div id="main-section-1-text-div">
-
-                    <h1 id="main-section-1-title">Solucionemos<br>el problema</h1>
-                    <span id="main-section-1-subtitle">Si has sido víctima de un<br>ciberdelito, y tienes pruebas,<br>denúncialo <a href="denuncia.html" class = "section-text-link">aquí</a></span>
-                    <a href="login.html" id="main-section-1-denounce-button">Denuncia</a>
-                </div>
-
-                <img id="main-section-1-img" src="./res/landing/collage_cybercrime.png"/>
-
-            </div>
-
-        </section>
-
-        <section class="main-section" id="main-section-2">
-            <div class="main-section-2-side-div"></div>
-
-            <div id="main-section-2-div">
-                <div class="main-section-2-container" id="main-section-2-title">
-                    <h1>¡Toma nuestro Test!</h1>
-                </div>
-                <div class="main-section-2-container"  id="main-section-2-p">
-                    <p>Descubre los ciberdelitos a los que eres vulnerable y obtén recomendaciones para estar más seguro. ¡Toma menos de 20 minutos!</p>
-                    <div>
-                        <div>
-                            <img src="./res/landing/test-digital.jpg" alt="img-test-digital"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-section-2-container" id="main-section-2-button">
-                    <a href="login.html">Toma el test</a>
+        <section class="main-section main-section-1">
+            <div class="ms1-left">
+                <h1>Solucionemos<br>el problema<strong>.</strong></h1>
+                <p>Si has sido víctima o testigo de un ciberdelito y tienes pruebas, denúncialo, en tan sólo 3 simples pasos.</p>
+                <div>
+                    <a class="denounce-button" href="./denuncia.html">Denuncia ahora</a>
+                    <a target="_blank" class="contact-button" href="mailto:cyberstop@gmail.com">Contáctanos</a>
                 </div>
             </div>
-
-            <div class="main-section-2-side-div"></div>
-        </section>
-
-        <section class="main-section" id="main-section-3">
-            <div id="main-section-3-div">
-
-                <img id="main-section-3-img" src="./res/landing/collage_info.png"/>
-                <div id="main-section-3-text-div">
-
-                    <h1 id="main-section-3-title">Infórmate</h1>
-                    <span id="main-section-3-subtitle">Echa un vistazo a nuestros artículos<br> sobre ciberdelitos y ciberseguridad <br><span class = "section-text-link">aquí</span>
-                    <a href="informate.html" id="main-section-3-denounce-button">Conoce más</a>
-
-                </div>
-
+            <div class="ms1-right">
+                <img src="./res/landing/workingperson.png">
             </div>
         </section>
 
-        <section class="main-section" id="main-section-4">
-            <div class="main-section-4-side-div"></div>
-
-            <div id="main-section-4-div">
-                <div class="main-section-4-container" id="main-section-4-title">
-                    <h1>¡Conoce a nuestro Equipo!</h1>
-                </div>
-                <div class="main-section-4-container"  id="main-section-4-p">
-                    <div>
-                        <div>
-                            <img src="./res/general/logo-cyberfix.png" alt="img-equipo"/>
-                        </div>
-                    </div>
-                    <p>Conoce a CyberFix, el equipo que está detrás de todo esto, y por qué deberías de confiar en nuestro trabajo</p>
-                </div>
-                <div class="main-section-4-container" id="main-section-4-button">
-                    <a href="nosotros.html">Conócelo</a>
-                </div>
+        <section class="main-section main-section-2">
+            <div class="ms2-left">
+                <img src="./res/landing/testingperson.png">
             </div>
+            <div class="ms2-right">
+                <h3>Protégete</h3>
+                <h2>Toma nuestro<br>test<strong>.</strong></h2>
+                <p>Averigua a qué ciberdelitos eres más vulnerable, y recibe recomendaciones para resolver esas vulnerabilidades.</p>
+                <a href="./test.html">Ir al test</a>
+            </div>
+        </section>
 
-            <div class="main-section-4-side-div"></div>
+        <section class="main-section main-section-3">
+            <h1>333333333333</h1>
+        </section>
+
+        <section class="main-section main-section-4">
+            <h1>44444444444</h1>
+        </section>
+
+        <section class="page-navigation">
+            <a class="arrow-button" id="left-arrow"> < </a>
+            <div class="navigation-circle nc-1"></div>
+            <div class="navigation-circle nc-2"></div>
+            <div class="navigation-circle nc-3"></div>
+            <div class="navigation-circle nc-4"></div>
+            <a class="arrow-button" id="right-arrow"> > </a>
         </section>
     </main>
 
     <footer>
-
-        <div class="footer-left-div">
-
-            <h3>¡Contáctanos!</h3>
-            <div>
-                <div>
-                    <span><img src="./res/general/mail-icon.png" alt="Correo:">cyberfix@gmail.com</span>
-                </div>
-                <div>
-                    <span><img src="./res/general/phone-icon.png"   alt="Teléfono:">999999999</span>
-                </div>
-            </div>
-            
-
-        </div>
-        <div class="footer-right-div">
-            <span>CyberFix © 2022</span>
-        </div>
-
+        <a target="_blank" href="../index.html">
+            <span>Creado por</span>
+            <h2>AM</h2>
+        </a>
     </footer>
     
     <script src="./scripts/landing.js"></script>
