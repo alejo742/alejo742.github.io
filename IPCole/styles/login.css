@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&family=Nunito:wght@40&family=Poppins:wght@300&family=Raleway:wght@500&display=swap');
 @keyframes fadeIn {
     from{
         opacity: 0;
@@ -76,21 +77,22 @@ html, body {
     width: 100%;
 }
 :root{
-    --colorPrimario: #45536d;
-    --colorPrimarioT: rgba(69, 83, 109, 0.9);
+    --colorPrimario: #FFF;
+    --colorPrimarioT: rgba(244, 244, 244, 0.8);
 
-    --colorEnPrimario: #FFFFFF;
-    --colorEnPrimarioT: rgba(244, 244, 244, 0.9);
+    --colorEnPrimario: rgb(22, 22, 55);
+    --colorEnPrimarioT: rgba(22, 22, 55, 0.8);
     
-    --colorSecundario: #af790c;
-    --colorSecundarioT: rgba(175, 121, 12, 0.9);
+    --colorSecundario: rgb(44, 44, 150);
+    --colorSecundarioT: rgba(44, 44, 150, 0.8);
 
-    --marronClaro: rgb(140, 107, 72);
-    --azulOscuro: rgb(36, 47, 68);
-    --blanco: rgb(255, 255, 255);
+    --texto: clamp(1rem, 0.7153rem + 1.5vw, 1.5rem);
+    --subtitulo: clamp(2.4rem, 0.7153em + 3vw, 3.5rem);
+    --titulo: clamp(3rem, 0.7153rem + 4vw, 5rem);
+    --banner: clamp(4rem, 0.7153rem + 4.5vw, 6.5rem);
 }
 
-/*Estilos generales*/
+/*!Fin de estilos generales*/
 
 body {
     background-color: var(--colorEnPrimario);
@@ -99,85 +101,86 @@ body {
 main {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 .main-login {
-    width: 30vw;
-    height: 80vh;
-    margin: 0 auto;
-    border-radius: 5%;
+    width: 100%;
+    height: 100vh;
     background-color: var(--colorPrimario);
     color: var(--colorEnPrimario);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    animation-name: moveInUp;
-    animation-duration: 2s;
-}
-.main-login div {
-    margin: 0 auto;
-    height: fit-content;
 }
 .ml-container {
     margin: 0 auto;
-    width: 100%;
+    height: 100%;
+    max-width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .ml-container > div{
-    width: 80%;
-    margin: 1em auto;
+    width: 100%;
+    margin: 1vh auto;
 }
 .ml-title {
-    margin: 2em;
-    font-size: 1.4em;
+    margin: 2vh auto;
+}
+.ml-title h1{
+    text-align: center;
+    font-size: var(--subtitulo);
 }
 .ml-container input {
-    width: 80%;
-    margin: 0.5em 0 0 0;
-    height: 2em;
-    padding: 1em;
+    width: 100%;
+    margin: 0.5vh auto;
+    max-height: 4vh;
+    padding: 1.5vw;
 }
 .ml-showpass {
     margin-top: 0;
+    margin-bottom: 5vh;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 .ml-showpass input[type="checkbox"] {
     margin: 0;
     padding: 0;
-    height: 1.5em;
-    width: 1.5em;
+    height: 3.5vh;
+    width: 3.5vh;
 }
 .ml-showpass h3 {
-    margin: 0 0 0 0.5em;
+    margin: 0 0 0 1vw;
+    font-size: var(--texto);
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .ml-login-button {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding: 4vh 0;
 }
 .ml-login-button a{
+    width: 100%;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1.6vh;
     background-color: var(--colorSecundario);
-    color: var(--colorEnPrimario);
-    font-size: 1.5em;
+    color: var(--colorPrimario);
+    font-size: var(--texto);
     text-decoration: none;
     transition: font-size, 0.5s;
+    text-align: center;
+    border-radius: 1vh;
 }
 .ml-login-button a:hover{
-    background-color: var(--colorSecundarioT);
-    font-size: 1.7em;
+    opacity: 0.8;
 }
 .ml-register {
-    font-size: 1.2em;
+    font-size: var(--texto);
 }
 .ml-register span a {
     text-decoration: underline;
@@ -188,75 +191,70 @@ main {
     color: var(--colorSecundario);
 }
 
-/*Media queries*/
+/*!Estilos del footer*/
 
-@media (max-width: 2100px) {
-    html{
-        font-size: 112.5%;
+footer{
+    height: 13vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--colorEnPrimario);
+    color: var(--colorPrimario);
+}
+footer a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--colorPrimario);
+}
+footer a span {
+    margin: 0 0.5vw;
+    font-size: var(--texto);
+}
+footer a h2 {
+    margin: 0 0.5vw;
+    font-size: var(--subtitulo);
+    font-family: 'Dancing Script';
+}
+
+/*!custom scroll bar*/
+
+::-webkit-scrollbar {
+    width: var(--texto);
+ }
+  
+::-webkit-scrollbar-track {
+    background: var(--colorEnPrimario);
+    box-shadow: 5px 0 0 5px var(--colorEnPrimario); 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: var(--colorSecundario); 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: var(--colorSecundarioT); 
+}
+
+
+/*!Media queries*/
+
+@media (max-width:750px) {
+    main{
+        grid-template-columns: none;
+    }
+    .right-background{
+        display: none;
     }
 }
-@media (max-width: 2000px) {
-    html{
-        font-size: 106.25%;
-    }
-}
-@media (max-width: 1900px) {
-    html{
-        font-size: 100%;
-    }
-}
-@media (max-width: 1800px) {
-    html{
-        font-size: 93.75%;
-    }
-}
-@media (max-width: 1700px) {
-    html{
-        font-size: 87.5%;
-    }
-}
-@media (max-width: 1600px) {
-    html{
-        font-size: 81.25%;
-    }
-}
-@media (max-width: 1500px) {
-    html{
-        font-size: 75%;
-    }
-}
-@media (max-width: 1400px) {
-    html{
-        font-size: 68.75%;
-    }
-}
-@media (max-width: 1200px) {
-    html{
-        font-size: 56.25%;
-    }
-}
-@media (max-width: 1100px) {
-    html{
-        font-size: 50%;
-    }
-}
-@media (max-width: 1000px) {
-    html{
-        font-size: 43.75%;
-    }
-}
-@media (max-width: 900px) {
-    html{
-        font-size: 37.5%;
-    }
-}
-@media (max-width: 800px) {
-    html{
-        font-size: 31.25%;
-    }
-}
-@media (max-width: 700px) {
-    html{
-        font-size: 25%;
+
+@media (max-width:550px){
+    .ml-container input {
+        max-height: 6vh;
+        padding: 1vh;
     }
 }
