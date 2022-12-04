@@ -1,3 +1,13 @@
+setTimeout(()=>{
+    const allDOM = Array.from(document.querySelectorAll('*'))
+    allDOM.forEach(element =>{
+        if(element.className != 'little-image'){
+            setAnimation(element, 'none')
+            console.log('animation gone')
+        }
+    })
+}, 1700)
+
 function setDisplay(element, value) {
     element.style.display = value
 }
@@ -14,20 +24,20 @@ const arrows = document.querySelectorAll('.arrow-button')
 
 function swapView(toHide, toView, clicked, displayType) {
     if(clicked=='left-arrow'){
-        setAnimation(toHide, 'swipeRight 1.5s')
-        setAnimation(toView, 'moveInRight 1.5s')
+        setAnimation(toHide, 'swipeRight 0.8s')
+        setAnimation(toView, 'moveInRight 0.8s')
         setTimeout(()=>{
             setDisplay(toHide, 'none')
             setDisplay(toView, displayType)
-        }, 1500)
+        }, 800)
     }
     else if(clicked=='right-arrow'){
-        setAnimation(toHide, 'swipeLeft 1.5s')
-        setAnimation(toView, 'moveInLeft 1.5s')
+        setAnimation(toHide, 'swipeLeft 0.8s')
+        setAnimation(toView, 'moveInLeft 0.8s')
         setTimeout(()=>{
             setDisplay(toHide, 'none')
             setDisplay(toView, displayType)
-        }, 1500)
+        }, 800)
     }
 }
 
@@ -61,19 +71,19 @@ arrows.forEach(arrow =>{
                 changeNavCircleColor(currentSection)
             }
             else if(currentSection==4){
-                swapView(sec4, sec3, arrow.id, 'grid')
+                swapView(sec4, sec3, arrow.id, 'flex')
                 currentSection = 3
                 changeNavCircleColor(currentSection)
             }
         }
-        if(arrow.id=='right-arrow'){
+        else if(arrow.id=='right-arrow'){
             if(currentSection==1){
                 swapView(sec1, sec2, arrow.id, 'grid')
                 currentSection = 2
                 changeNavCircleColor(currentSection)
             }
             else if(currentSection==2){
-                swapView(sec2, sec3, arrow.id, 'grid')
+                swapView(sec2, sec3, arrow.id, 'flex')
                 currentSection = 3
                 changeNavCircleColor(currentSection)
             }
