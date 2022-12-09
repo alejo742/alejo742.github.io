@@ -5,45 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/denuncia.css">
-    <link rel="icon" href="../IP2022/res/general/cybersecurity-icon-rounded.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hubballi&family=Josefin+Sans:wght@400&family=League+Gothic&family=Sansita+Swashed:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@300&family=Poppins:wght@300&family=Raleway:wght@500&display=swap');
-    </style>
-    <title>Denuncia un ciberdelito</title>
+    <link rel="icon" href="./res/general/logo-cyberstop.png">
+    <title>Denuncia un ciberdelito | CyberStop</title>
 </head>
 <body>
-
     <header>
-        <a class="h-element upper" href="javascript:history.back()"><- Volver</a>
-        <h1 class="h-element upper">Denuncia un ciberdelito</h1>
-        <h2 class="h-element upper">En 3 simples pasos</h2>
-        <div class="h-grid h-element">
-            <a href="#step1" class="header-step ">
-                <div><span>1</span></div>
-                <img src="./res/denuncia/edit-note.svg" alt="">
-                <p>Explicación de lo que sucedió y cómo te afectó a ti o a alguien de tu entorno</p>
-            </a>
-            <a href="#step2" class="header-step">
-                <div><span>2</span></div>
-                <img src="./res/denuncia/lupa.svg" alt="">
-                <p>La evidencia que verifican que el hecho pasó tal como lo narras</p>
-            </a>
-            <a href="#step3" class="header-step">
-                <div><span>3</span></div>
-                <img src="./res/denuncia/description.svg" alt="">
-                <p>Los datos necesarios para proceder legalmente con la denuncia</p>
-            </a>
+        <h1>Denuncia un<br>ciberdelito</h1>
+        <p>Haz justicia en tan sólo 3 simples pasos.</p>
+        <div>
+            <a class="denounce-button" onclick="showSteps()">Nueva denuncia</a>
+            <a target="_blank" class="contact-button" href="mailto:cyberstop@gmail.com">Contáctanos</a>
         </div>
     </header>
+    <div class="ornaments">
+        
+    </div>
 
-    <main>
+    <main style="display: none;">
 
-        <div onclick="show1()" id="step1" class="step">
-            <h1>Paso 1: Lo qué pasó</h1>
-            <h4>Describe detalladamente lo que sucedió y como te afectó a ti o a tu entorno.</h4>
-            <h4 id="click-title1">¡Haz click!</h4>
-
+        <div id="step1" class="step">
+            <h1>1. Sobre el suceso.</h1>
             <div id="quiz1" class="quiz">
                 <div>
                     <div>
@@ -61,11 +42,8 @@
             </div>
         </div>
 
-        <div onclick="show2()" id="step2" class="step">
-            <h1>Paso 2: Las pruebas</h1>
-            <h4>Sube aquí las evidencias del hecho (capturas de pantalla, audios, vídeos, fotos, etc.)</h4>
-            <h4 id="click-title2">¡Haz click!</h4>
-
+        <div id="step2" class="step">
+            <h1>2. Las pruebas.</h1>
             <div id="quiz2" class="quiz">
                 <div>
                     <h4>Archivos subidos:</h4>
@@ -78,11 +56,8 @@
             </div>
         </div>
 
-        <div onclick="show3()" id="step3" class="step">
-            <h1>Paso 3: Los datos</h1>
-            <h4>Rellena los siguientes campos para habilitar la comunicación contigo y la identificación del denunciante</h4>
-            <h4 id="click-title3">¡Haz click!</h4>
-
+        <div id="step3" class="step">
+            <h1>3. La burocracia.</h1>
             <div id="quiz3" class="quiz">
                 <div>
                     <h4>Rellena los siguientes datos para proceder con la denuncia</h4>
@@ -95,34 +70,26 @@
                 </div>
                 <div>
                     <h4>Cuando estés listo para realizar tu denuncia con toda la información provista, haz click en "Denunciar"</h4>
-                    <a href="">¡Denunciar!</a>
+                    <a onclick="showFinalMessage()">¡Denunciar!</a>
                 </div>
             </div>
         </div>
 
     </main>
 
+    <section class="final-message" style="display: none;">
+        <h1>¡Hecho!</h1>
+        <p>Gracias por colocar tu denuncia. Has dado un importante paso en solucionar el problema.</p>
+        <a href="./dashboard.html">Salir</a>
+    </section>
+
     <footer>
-
-        <div class="footer-left-div">
-
-            <h3>¡Contáctanos!</h3>
-            <div>
-                <div>
-                    <span><img src="./res/general/mail-icon.png" alt="Correo:">cyberfix@gmail.com</span>
-                </div>
-                <div>
-                    <span><img src="./res/general/phone-icon.png"   alt="Teléfono:">999999999</span>
-                </div>
-            </div>
-            
-
-        </div>
-        <div class="footer-right-div">
-            <span>CyberFix © 2022</span>
-        </div>
-
+        <a target="_blank" href="../index.html">
+            <span>Creado por</span>
+            <h2>AM</h2>
+        </a>
     </footer>
+    
 
     <script src="./scripts/denuncia.js"></script>
 </body>

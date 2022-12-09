@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&family=Nunito:wght@400&family=Poppins:wght@300&family=Raleway:wght@500&display=swap');
 @keyframes fadeIn {
     from{
         opacity: 0;
@@ -64,6 +65,7 @@ html{
     font-size: 62.5%;
 }
 body{
+    width: 100vw;
     overflow-x: hidden;
     overflow-y: scroll;
     font-family: 'Montserrat', sans-serif;
@@ -76,117 +78,83 @@ html, body {
     width: 100%;
 }
 :root{
-    --colorPrimario: #45536d;
-    --colorPrimarioT: rgba(69, 83, 109, 0.9);
+    --colorPrimario: #FFF;
+    --colorPrimarioT: rgba(244, 244, 244, 0.8);
 
-    --colorEnPrimario: #FFFFFF;
-    --colorEnPrimarioT: rgba(244, 244, 244, 0.9);
+    --colorEnPrimario: rgb(22, 22, 55);
+    --colorEnPrimarioT: rgba(22, 22, 55, 0.8);
     
-    --colorSecundario: #af790c;
-    --colorSecundarioT: rgba(175, 121, 12, 0.9);
+    --colorSecundario: rgb(44, 44, 150);
+    --colorSecundarioT: rgba(44, 44, 150, 0.9);
 
-    --marronClaro: rgb(140, 107, 72);
-    --azulOscuro: rgb(36, 47, 68);
-    --blanco: rgb(255, 255, 255);
+    --texto: clamp(1rem, 0.7153rem + 1.5vw, 1.5rem);
+    --subtitulo: clamp(2.4rem, 0.7153em + 3vw, 3.5rem);
+    --titulo: clamp(3rem, 0.7153rem + 4vw, 5rem);
+    --banner: clamp(4rem, 0.7153rem + 4.5vw, 6.5rem);
 }
 
-/*Fin de estilos generales*/
+/*!Fin de estilos generales*/
 
-/*Estilos de portada*/
-
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+header{
     width: 100vw;
     height: 100vh;
-    background-color: var(--colorEnPrimario);
-    color: var(--colorPrimario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.h-element {
-    margin: 1.5rem auto;
-}
-.upper {
-    animation-name: moveInDown;
-    animation-duration: 1.5s;
-}
-a.h-element {
-    padding: 1rem;
-    color: var(--colorEnPrimario);
-    text-decoration: none;
-    font-size: 1.2rem;
-    background-color: var(--colorPrimario);
-    transition: all 0.5s;
-}
-a.h-element:hover {
-    font-size: 1.3rem;
-    padding: 1.2rem;
-    background-color: var(--colorPrimarioT);
-}
-h1.h-element {
-    font-size: 3.5rem;
-}
-h2.h-element {
-    font-size: 2rem;
-}
-.h-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    width: 90vw;
+header h1{
+    max-width: 60%;
+    font-size: var(--banner);
     text-align: center;
-    text-decoration: none;
-    transition: all 0.5s;
+    white-space: nowrap;
 }
-.h-grid:hover {
-    width: 92%;
-    cursor: pointer;
+header p{
+    margin: 3vh 0;
+    font-size: var(--texto);
+    opacity: 0.8;
 }
-.header-step {
-    margin: 2rem auto;
-    min-height: 50vh;
-    max-height: 60vh;
-    width: 100%;
+header > div {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    transition: all 0.5s;
+    margin: 3vh 0;
+}
+header a {
+    font-size: var(--texto);
+    padding: 3vw 1.5vh;
+    display: inline-block;
+    margin: 0 2vw 0 0;
+    width: fit-content;
+    font-size: calc(var(--texto)*0.85);
     text-decoration: none;
-    color: var(--colorPrimario);
-    animation-name: moveInUp;
-    animation-duration: 2s;
+    text-transform: uppercase;
+    letter-spacing: 0.05vw;
+    border-radius: 0.5vh;
+    padding: 3vh;
+    font-weight: bold;
+    transition: all 0.5s;
 }
-.header-step:hover {
-    padding: 2rem;
-    border: 1px solid var(--colorSecundario);
-}
-.header-step div, img, p {
-    margin: 1rem auto;
-}
-.header-step div {
-    width: 5rem;
-    height: 5rem;
-    border-radius: 100%;
+.denounce-button{
     background-color: var(--colorSecundario);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    color: var(--colorPrimario);
+    box-shadow: 0.15vw 0.15vh 0.15vw var(--colorEnPrimario);
 }
-.header-step div span {
-    margin: 0 auto;
-    color: var(--colorEnPrimario);
-    font-size: 2rem;
+.denounce-button:hover {
+    cursor: pointer;
+    background-color: var(--colorSecundarioT);
 }
-.header-step img {
-    min-width: 40%;
-    max-width: 70%;
-    max-height: 40%;
+.contact-button{
+    background-color: var(--colorPrimario);
+    color: var(--colorSecundario);
+    border: 0.2vh solid var(--colorSecundario);
+    box-shadow: 0.15vw 0.15vh 0.15vw var(--colorSecundarioT);
 }
-.header-step p {
-    font-size: 1.5rem;
-    max-width: 80%;
+.contact-button:hover {
+    background-color: rgba(44, 44, 150, 0.1);
+    box-shadow: 0.15vw 0.15vh 0.15vw var(--colorSecundario);
 }
 
-/*Estilos de main*/
+/*!Estilos principales*/
 
 main {
     width: 100vw;
@@ -196,32 +164,22 @@ main {
 .step {
     height: 100vh;
     width: 100%;
-    background-color: var(--colorEnPrimario);
-    color: var(--colorPrimario);
-    border: 2px solid var(--colorPrimario);
+    background-color: var(--colorPrimario);
+    color: var(--colorEnPrimario);
     display: flex;
     flex-direction: column;
     justify-content: center;
     transition: font-size 0.5s;
 }
-.step:hover{
-    font-size: 1.1em;
-    cursor: pointer;
-}
 .step * {
-    margin: 1rem auto;
+    margin: 1vh auto;
 }
-.step h1 {
-    font-size: 3em;
+.step h1, section h1 {
+    font-size: var(--titulo);
 }
 .step h4 {
-    font-size: 1.5em;
-}
-.quiz {
-    display: none;
-}
-.quiz:hover{
-    cursor: auto;
+    font-size: var(--texto);
+    text-align: center;
 }
 #quiz1 > div {
     display: grid;
@@ -235,28 +193,37 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 2rem;
+    margin: 2vh;
 }
 #description-textbox {
-    padding: 1rem;
-    border: 2px solid var(--colorPrimario);
+    padding: 1vh;
+    border: 0.3vh solid var(--colorEnPrimario);
     border-radius: 5%;
+    font-size: var(--texto);
+    font-family: 'Montserrat', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 90%;
 }
-#quiz1 > div > div > div {
-    display: inline block;
+#description-textbox:focus{
+    border: 0.3vh solid var(--colorSecundario);
+    outline: none !important;
+    box-shadow: none !important;
 }
 #quiz1 > div > div > div input {
-    width: 1.5rem;
-    height: 1.5rem;
+    display: inline block;
+    width: 1.5vw;
+    height: 1.5vw
 }
 #quiz1 > div > div > div span {
     margin: auto;
-    font-size: 1.4rem;
+    font-size: var(--texto);
     height: 100%;
 }
 
 #quiz2 {
-    display: none;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     width: 90vw;
     height: 60vh;
@@ -269,29 +236,34 @@ main {
     justify-content: center;
 }
 #quiz2 > div * {
-    margin: 1rem auto;
+    margin: 1vh auto;
 }
 #quiz2 > div span {
-    padding: 0.5rem;
-    border: 1px solid var(--colorPrimario);
+    padding: 0.5vh;
+    border: 1px solid var(--colorEnPrimario);
 }
 #quiz2 > div button {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05vw;
+    border-radius: 0.5vh;
     background-color: var(--colorPrimario);
-    color: var(--colorEnPrimario);
-    font-size: 1.5rem;
-    padding: 1rem;
+    color: var(--colorSecundario);
+    border: 0.2vh solid var(--colorSecundario);
+    box-shadow: 0.15vw 0.15vh 0.15vw var(--colorSecundarioT);
+    padding: 3vh;
+    font-weight: bold;
+    font-size: var(--texto);
     transition: all 0.5s;
-    border: none;
 }
 #quiz2 > div button:hover {
     cursor: pointer;
-    background-color: var(--colorPrimarioT);
-    padding: 1.2rem;
-    font-size: 1.6rem;
+    background-color: rgba(44, 44, 150, 0.1);
+    box-shadow: 0.15vw 0.15vh 0.15vw var(--colorSecundario);
 }
 
 #quiz3 {
-    display: none;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     width: 90vw;
     height: 60vh;
@@ -299,160 +271,161 @@ main {
 #quiz3 > div {
     width: 90%;
     height: 90%;
-    margin: 2rem;
+    margin: 2vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 #quiz3 > div h5 {
-    font-size: 1.2rem;
+    font-size: 1.2vh;
 }
 #quiz3 > div input {
     width: 30vw;
-    font-size: 1rem;
-    padding: 0.5rem;
+    font-size: 1vh;
+    padding: 0.5vh;
+}
+#quiz3 > div input:focus{
+    border: 0.3vh solid var(--colorSecundario);
+    outline: none !important;
+    box-shadow: none !important;
 }
 #quiz3 > div a {
-    background-color: var(--colorPrimario);
-    color: var(--colorEnPrimario);
-    font-size: 1.5rem;
-    text-align: center;
     text-decoration: none;
-    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05vw;
+    border-radius: 0.5vh;
+    background-color: var(--colorSecundario);
+    color: var(--colorPrimario);
+    box-shadow: 0.15vw 0.15vh 0.15vw var(--colorEnPrimario);
+    border: 0.2vh solid var(--colorSecundario);
+    padding: 3vh;
+    font-weight: bold;
+    font-size: var(--texto);
     transition: all 0.5s;
 }
 #quiz3 > div a:hover {
-    padding: 1.2rem;
-    font-size: 1.7rem;
-    background-color: var(--colorPrimarioT);
+    cursor: pointer;
+    background-color: var(--colorSecundarioT);
 }
 
-/*Estilos del footer*/
+/*!Mensaje final de denuncia*/
+
+section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vh;
+}
+section p{ 
+    max-width: 50%;
+    font-size: var(--texto);
+    text-align: center;
+}
+section a {
+    font-size: var(--texto);
+    padding: 3vw 1.5vh;
+    display: inline-block;
+    margin: 0 2vw 0 0;
+    width: fit-content;
+    font-size: calc(var(--texto)*0.85);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05vw;
+    border-radius: 0.5vh;
+    padding: 3vh;
+    font-weight: bold;
+    transition: all 0.5s;
+}
+section a{
+    background-color: var(--colorPrimario);
+    color: var(--colorSecundario);
+    border: 0.2vh solid var(--colorSecundario);
+    box-shadow: 0.15vw 0.15vh 0.15vw var(--colorSecundarioT);
+}
+section a:hover {
+    background-color: rgba(44, 44, 150, 0.1);
+    box-shadow: 0.15vw 0.15vh 0.15vw var(--colorSecundario);
+}
+
+/*!Estilos del footer*/
 
 footer{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+    height: 13vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: var(--colorEnPrimario);
     color: var(--colorPrimario);
-    border-top: 2px solid var(--colorPrimario);
 }
-.footer-left-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-}
-.footer-left-div h3{
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0.5em;
-    padding: 0.5em;
-}
-.footer-left-div div {
+footer a {
+    text-decoration: none;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
+    color: var(--colorPrimario);
 }
-.footer-left-div > div {
-    display: flex;
-    flex-direction: row;
+footer a span {
+    margin: 0 0.5vw;
+    font-size: var(--texto);
 }
-.footer-left-div img {
-    max-height: 1.2em;
-    margin: 0 0.5em;
-}
-.footer-left-div span {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5em;
-    margin: 0.5em;
-    padding: 0.5em;
-}
-.footer-right-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
-.footer-right-div span {
-    font-size: 1.5em;
-    margin: 0.5em;
-    padding: 0.5em;
+footer a h2 {
+    margin: 0 0.5vw;
+    font-size: var(--subtitulo);
+    font-family: 'Dancing Script';
 }
 
-/*Media queries*/
 
-@media (hover: none) {
-    header {
-      opacity: 1;
+/*!custom scroll bar*/
+
+::-webkit-scrollbar {
+    width: var(--texto);
+ }
+  
+::-webkit-scrollbar-track {
+    background: var(--colorEnPrimario);
+    box-shadow: 5px 0 0 5px var(--colorEnPrimario); 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: var(--colorSecundario); 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: var(--colorSecundarioT); 
+}
+
+/*!Media queries*/
+
+@media (max-width:600px) {
+    #quiz1 > div{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        max-height: 120vh;
     }
-  }
-@media (max-width: 2100px) {
-    html{
-        font-size: 112.5%;
+    #quiz2{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        max-height: 120vh;
+    }
+    #quiz3{
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+        max-height: 120vh;
     }
 }
-@media (max-width: 2000px) {
-    html{
-        font-size: 106.25%;
+
+@media (max-width:500px){
+    header > div {
+        flex-direction: column;
+        align-items: center;
     }
-}
-@media (max-width: 1900px) {
-    html{
-        font-size: 100%;
-    }
-}
-@media (max-width: 1800px) {
-    html{
-        font-size: 93.75%;
-    }
-}
-@media (max-width: 1700px) {
-    html{
-        font-size: 87.5%;
-    }
-}
-@media (max-width: 1600px) {
-    html{
-        font-size: 81.25%;
-    }
-}
-@media (max-width: 1500px) {
-    html{
-        font-size: 75%;
-    }
-}
-@media (max-width: 1400px) {
-    html{
-        font-size: 68.75%;
-    }
-}
-@media (max-width: 1200px) {
-    html{
-        font-size: 56.25%;
-    }
-}
-@media (max-width: 1100px) {
-    html{
-        font-size: 50%;
-    }
-}
-@media (max-width: 1000px) {
-    html{
-        font-size: 43.75%;
-    }
-}
-@media (max-width: 900px) {
-    html{
-        font-size: 37.5%;
-    }
-}
-@media (max-width: 800px) {
-    html{
-        font-size: 31.25%;
-    }
-}
-@media (max-width: 700px) {
-    html{
-        font-size: 25%;
+    header a {
+        margin: 1vh 0;
     }
 }
