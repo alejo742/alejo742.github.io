@@ -5,27 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/test.css">
-    <link rel="icon" href="../IP2022/res/general/cybersecurity-icon-rounded.png">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Hubballi&family=Josefin+Sans:wght@400&family=League+Gothic&family=Sansita+Swashed:wght@300&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@300&family=Poppins:wght@300&family=Raleway:wght@500&display=swap');
-    </style>
-    <title>Toma el test</title>
+    <link rel="icon" href="./res/general/logo-cyberstop.png">
+    <title>CyberStop | Toma nuestro test</title>
 </head>
 <body>
 
     <header>
-        <a href="javascript:history.back()"><- Volver</a>
-        <h1>¡Toma nuestro test!</h1>
-        <h2>Averigua a qué ciberdelitos eres más vulnerable y obtén recomendaciones para evitar ser víctima de uno, respondiendo estas preguntas</h2>
-        <a onclick="showMain()" href="#question1" id="start-button">Comienza el test</a>
+        <h1>Test de <strong>vulnerabilidad</strong> tecnológica</h1>
+        <div class="characteristics">
+            <section class="characteristic">
+                <img src="./res/testing/rapido.svg">
+                <h2>Rápido</h2>
+                <p>Resolver nuestro test te tomará sólo entre 5 y 10 minutos.</p>
+            </section>
+            <section class="characteristic">
+                <img src="./res/testing/conciso.svg">
+                <h2>Conciso</h2>
+                <p>Las preguntas son simples, de entendimiento común y breves.</p>
+            </section>
+            <section class="characteristic">
+                <img src="./res/testing/preciso.svg">
+                <h2>Preciso</h2>
+                <p>Los resultados, además de ser inmediatos, son acertados.</p>
+            </section>
+        </div>
+        <a onclick="showMain()" class="start-button" href="#question1">Comienza</a>
     </header>
 
     <main id="main">
 
         <div class="question">
             <div class="text">
-                <h1>¿Utilizas la misma contraseña en tus cuentas (redes sociales, correos electrónicos, bloqueo de aplicaciones)?</h1>
+                <h2>¿Utilizas la misma contraseña en tus cuentas (redes sociales, correos electrónicos, bloqueo de aplicaciones)?</h2>
             </div>
             <div class="options">
                 <a href="#question1" class="option fraude hackeo phishing"><span>Nunca</span></a>
@@ -40,7 +51,7 @@
 
         <div class="question">
             <div class="text">
-                <h1>¿Compartes información personal (nombre completo, edad, lugar de residencia, etc) en alguna página web?</h1>
+                <h2>¿Compartes información personal (nombre completo, edad, lugar de residencia, etc) en alguna página web?</h2>
             </div>
             <div class="options">
                 <a href="#question2" class="option fraude phishing"><span>Nunca</span></a>
@@ -55,7 +66,7 @@
 
         <div class="question">
             <div class="text">
-                <h1>¿Haces uso de tu tarjeta de crédito / débito en alguna página web no segura?</h1>
+                <h2>¿Haces uso de tu tarjeta de crédito / débito en alguna página web no segura?</h2>
             </div>
             <div class="options">
                 <a href="#question3" class="option carding"><span>Nunca</span></a>
@@ -70,7 +81,7 @@
 
         <div class="question">
             <div class="text">
-                <h1>¿Navegas sin antivirus?</h1>
+                <h2>¿Navegas sin antivirus?</h2>
             </div>
             <div class="options">
                 <a href="#question4" class="option hackeo ciberacoso"><span>Nunca</span></a>
@@ -85,7 +96,7 @@
 
         <div class="question">
             <div class="text">
-                <h1>¿Te conectas a redes Wifi de libre acceso?</h1>
+                <h2>¿Te conectas a redes Wifi de libre acceso?</h2>
             </div>
             <div class="options">
                 <a href="#question5" class="option hackeo carding sexting"><span>Nunca</span></a>
@@ -100,7 +111,7 @@
 
         <div class="question">
             <div class="text">
-                <h1>¿Compartes alguna contraseña con otra persona?</h1>
+                <h2>¿Compartes alguna contraseña con otra persona?</h2>
             </div>
             <div class="options">
                 <a href="#question6" class="option fraude phishing ciberacoso"><span>Nunca</span></a>
@@ -115,7 +126,7 @@
 
         <div class="question">
             <div class="text">
-                <h1>¿Compartes fotos íntimas con un tercero?</h1>
+                <h2>¿Compartes fotos íntimas con un tercero?</h2>
             </div>
             <div class="options">
                 <a href="#question7" class="option sexting ciberacoso"><span>Nunca</span></a>
@@ -130,7 +141,7 @@
 
         <div class="question">
             <div class="text">
-                <h1>¿Compartes la clave de tu tarjeta de crédito / débito?</h1>
+                <h2>¿Compartes la clave de tu tarjeta de crédito / débito?</h2>
             </div>
             <div class="options">
                 <a href="#question8" class="option carding phishing"><span>Nunca</span></a>
@@ -145,7 +156,7 @@
 
         <div  class="question">
             <div class="text">
-                <h1>¿Ingresas a links no seguros? (enviados desde alguna red de mensajería)</h1>
+                <h2>¿Ingresas a links no seguros? (enviados desde alguna red de mensajería)</h2>
             </div>
             <div class="options">
                 <a href="#question9" class="option hackeo phishing"><span>Nunca</span></a>
@@ -160,7 +171,7 @@
 
         <div class="question">
             <div class="text">
-                <h1>¿Has aceptado solicitudes de cuentas desconocidas en alguna red social?</h1>
+                <h2>¿Has aceptado solicitudes de cuentas desconocidas en alguna red social?</h2>
             </div>
             <div class="options">
                 <a href="#question10" class="option ciberacoso sexting phishing"><span>Nunca</span></a>
@@ -169,21 +180,25 @@
                 <a href="#question10" class="option ciberacoso sexting phishing"><span>Siempre</span></a>
             </div>
             <div class="next-container">
-                <a onclick="showR()" class="next-button" href="#resultados">Enviar</a>
+                <a id="result-button" onclick="showResults()" class="result-button" href="#resultados">Enviar</a>
             </div>
         </div>
 
         <div id="resultados">
-            <h1>Vulnerabilidad a los siguientes ciberdelitos:</h1>
-            <h2>¡Haz click en cada cuadro para ver recomendaciones para ti!</h2>
+            <h2>Vulnerabilidad a los siguientes ciberdelitos:</h2>
             <div>
                 <div class="result">
                     <div class="bar-c">
                         <div class="bar" id="sexting-bar"></div>
                     </div>
 
-                    <h1 class="per" id="sexting-per">10%</h1>
-                    <h1>Sexting</h1>
+                    <h2 class="per" id="sexting-per"></h2>
+                    <h2>Sexting</h2>
+                    <ul id="sexting-recom">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
 
                 <div class="result">
@@ -191,8 +206,13 @@
                         <div class="bar" id="fraude-bar"></div>
                     </div>
 
-                    <h1 class="per" id="fraude-per">27%</h1>
-                    <h1>Fraude</h1>
+                    <h2 class="per" id="fraude-per"></h2>
+                    <h2>Fraude</h2>
+                    <ul id="fraude-recom">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
 
                 <div class="result">
@@ -200,8 +220,13 @@
                         <div class="bar" id="carding-bar"></div>
                     </div>
 
-                    <h1 class="per" id="carding-per">16%</h1>
-                    <h1>Carding</h1>
+                    <h2 class="per" id="carding-per"></h2>
+                    <h2>Carding</h2>
+                    <ul id="carding-recom">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
 
                 <div class="result">
@@ -209,8 +234,13 @@
                         <div class="bar" id="phishing-bar"></div>
                     </div>
 
-                    <h1 class="per" id="phishing-per">19%</h1>
-                    <h1>Phishing</h1>
+                    <h2 class="per" id="phishing-per"></h2>
+                    <h2>Phishing</h2>
+                    <ul id="phishing-recom">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
 
                 <div class="result">
@@ -218,8 +248,13 @@
                         <div class="bar" id="hackeo-bar"></div>
                     </div>
 
-                    <h1 class="per" id="hackeo-per">25%</h1>
-                    <h1>Hackeo</h1>
+                    <h2 class="per" id="hackeo-per"></h2>
+                    <h2>Hackeo</h2>
+                    <ul id="hackeo-recom">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
 
                 <div class="result">
@@ -227,8 +262,13 @@
                         <div class="bar" id="ciberacoso-bar"></div>
                     </div>
 
-                    <h1 class="per" id="ciberacoso-per">18%</h1>
-                    <h1>Ciberacoso</h1>
+                    <h2 class="per" id="ciberacoso-per"></h2>
+                    <h2>Ciberacoso</h2>
+                    <ul id="ciberacoso-recom">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -236,25 +276,10 @@
     </main>
 
     <footer>
-
-        <div class="footer-left-div">
-
-            <h3>¡Contáctanos!</h3>
-            <div>
-                <div>
-                    <span><img src="./res/general/mail-icon.png" alt="Correo:">cyberfix@gmail.com</span>
-                </div>
-                <div>
-                    <span><img src="./res/general/phone-icon.png"   alt="Teléfono:">983362075</span>
-                </div>
-            </div>
-            
-        </div>
-
-        <div class="footer-right-div">
-            <span>CyberFix © 2022</span>
-        </div>
-
+        <a target="_blank" href="../index.html">
+            <span>Creado por</span>
+            <h2>AM</h2>
+        </a>
     </footer>
     <script src="./scripts/test.js"></script>
 </body>

@@ -602,26 +602,25 @@ footer{
 .footer-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
 }
 .f-wrap {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .f-wrap h2 {
     font-size: var(--subtitulo);
     font-family: 'Dancing Script', sans-serif;
-}
-.f-wrap h3 {
-    font-size: var(--texto);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .cv-c {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 .cv-inv{
     margin: 4vh auto 0 auto;

@@ -547,6 +547,7 @@ footer a {
 footer a span {
     margin: 0 0.5vw;
     font-size: var(--texto);
+    white-space: nowrap;
 }
 footer a h2 {
     margin: 0 0.5vw;
