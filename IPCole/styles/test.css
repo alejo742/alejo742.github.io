@@ -400,6 +400,7 @@ footer a h2 {
     font-size: var(--subtitulo);
     color: var(--colorPrimario);
     font-family: 'Dancing Script';
+    font-weight: 700;
 }
 
 

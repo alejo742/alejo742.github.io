@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./res/logo.png">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./resolutor.css">
+    <link rel="stylesheet" href="./generador.css">
+    <title>Sudoku | Resuelve sudokus online</title>
+</head>
+<body>
+    <section class="loading">
+        <div class="loading-wrapper">
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+            <div class="loading-bar"></div>
+        </div>
+        <h2 class="loading-title">Cargando...</h2>
+    </section>
+
+    <main style="display: none;">
+        <nav>
+            <div class="logo">
+                <img src="./res/logo.png" alt="S">
+                <button id="menu-button"><img src="./res/menu-icon.svg" alt=""> Menú</button>
+            </div>
+            <div class="navigation" id="navigation">
+                <button class="nav-button selected">
+                    <img class="nav-icon" src="./res/resolutor-icon.svg" alt="">
+                    <span class="nav-text">Resolutor</span>
+                </button>
+                <button class="nav-button">
+                    <img class="nav-icon" src="./res/generador-icon.svg" alt="">
+                    <span class="nav-text">Generador</span>
+                </button>
+            </div>
+        </nav>
+
+        <section class="content-section displaying" id="resolutor">
+            <div class="top-content">
+                <h2>Sudoku 9x9</h2>
+            </div>
+            <div class="solver">
+                <div class="sudoku-container">
+                    <div class="sudoku-r">
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="A1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="A2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="A3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="A4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="A5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="A6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="A7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="A8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="A9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="B9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="C9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="D1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="D2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="D3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="D4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="D5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="D6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="D7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="D8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="D9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="E9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="F9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="G1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="G2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="G3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="G4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="G5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="G6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-r">
+                            <input class="inner-box-r" id="G7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="G8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="G9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="H9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-r" id="I9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                    </div>
+                </div>
+                <div id="error-message">
+                    <p></p>
+                </div>
+                <div class="solver-ui">
+                    <button id="resolve-button">¡Resolver!</button>
+                </div>
+            </div>
+        </section>
+        <section class="content-section" id="generador">
+            <div class="top-content">
+                <h2>Sudoku 9x9</h2>
+            </div>
+            <div class="generator">
+                <div class="sudoku-container">
+                    <div class="sudoku-g">
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gA1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gA2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gA3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gA4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gA5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gA6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gA7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gA8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gA9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gB9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gC9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gD1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gD2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gD3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gD4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gD5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gD6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gD7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gD8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gD9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gE9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gF9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gG1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gG2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gG3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI1" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI2" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI3" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gG4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gG5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gG6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI4" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI5" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI6" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                        <div class="outer-box-g">
+                            <input class="inner-box-g" id="gG7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gG8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gG9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gH9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI7" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI8" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                            <input class="inner-box-g" id="gI9" type="text" maxlength="1" onkeypress="return onlyNumberKey(event)">
+                        </div>
+                    </div>
+                </div>
+                <div class="generator-ui">
+                    <select name="dificultad" id="select-dificultad">
+                        <option value="fácil" selected>Fácil</option>
+                        <option value="normal">Normal</option>
+                        <option value="difícil">Difícil</option>
+                    </select>
+                    <div></div>
+                    <button id="generate-button">¡Generar!</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./scripts/visuals.js"></script>
+    <script src="./scripts/resolutor.js"></script>
+    <script src="./scripts/generador.js"></script>
+</body>
+</html>

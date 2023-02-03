@@ -61,6 +61,7 @@
     animation-name: fadeIn;
     animation-duration: 1s;
     scroll-behavior: smooth;
+    transition: all 0.5s;
 } 
 html{
     font-size: 62.5%;
@@ -175,13 +176,24 @@ main {
 .step * {
     margin: 1vh auto;
 }
-.step h1, section h1 {
+.step h1, section h1{
     font-size: var(--titulo);
+}
+.step h5 {
+    font-size: calc(var(--texto)*1.1);
+    font-weight: 500;
+    max-width: 70%;
+    text-align: center;
 }
 .step h4 {
     font-size: var(--texto);
     text-align: center;
+    max-width: 70%;
 }
+.quiz {
+    margin-top: 3vh;
+}
+/**Quiz1*/
 #quiz1 > div {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -199,7 +211,7 @@ main {
 #description-textbox {
     padding: 1vh;
     border: 0.3vh solid var(--colorEnPrimario);
-    border-radius: 5%;
+    border-radius: 2vh;
     font-size: var(--texto);
     font-family: 'Montserrat', sans-serif;
     -webkit-box-sizing: border-box;
@@ -212,17 +224,17 @@ main {
     outline: none !important;
     box-shadow: none !important;
 }
-#quiz1 > div > div > div input {
+#quiz1 input {
     display: inline block;
     width: 1.5vw;
-    height: 1.5vw
+    height: 1.5vw;
 }
-#quiz1 > div > div > div span {
-    margin: auto;
+#quiz1 span {
     font-size: var(--texto);
     height: 100%;
 }
 
+/**Quiz2*/
 #quiz2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -237,11 +249,34 @@ main {
     justify-content: center;
 }
 #quiz2 > div * {
-    margin: 1vh auto;
+    margin: 1.5vh auto;
 }
-#quiz2 > div span {
-    padding: 0.5vh;
+#quiz2 .file-container {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#quiz2 .file-container span, .uploads {
+    padding: 1.5vh;
     border: 1px solid var(--colorEnPrimario);
+    font-size: calc(var(--texto)*0.7);
+    margin: 1.5vh 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#quiz2 .file-container span strong, .uploads strong {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    color: var(--colorSecundario);
+    font-size: var(--texto);
+    margin-left: 1vw;
+    padding: 1vw;
+}
+#quiz2 .file-container span strong:hover, .uploads strong:hover {
+    cursor: pointer;
+    transform: rotate(360deg);
 }
 #quiz2 > div button {
     text-decoration: none;
@@ -263,6 +298,7 @@ main {
     box-shadow: 0.15vw 0.15vh 0.15vw var(--colorSecundario);
 }
 
+/**Quiz3*/
 #quiz3 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -278,11 +314,11 @@ main {
     justify-content: center;
 }
 #quiz3 > div h5 {
-    font-size: 1.2vh;
+    font-size: calc(var(--texto)*0.8);
 }
 #quiz3 > div input {
     width: 30vw;
-    font-size: 1vh;
+    font-size: var(--texto);
     padding: 0.5vh;
 }
 #quiz3 > div input:focus{
@@ -380,6 +416,7 @@ footer a h2 {
     margin: 0 0.5vw;
     font-size: var(--subtitulo);
     font-family: 'Dancing Script';
+    font-weight: 700;
 }
 
 
@@ -429,5 +466,9 @@ footer a h2 {
     }
     header a {
         margin: 1vh 0;
+    }
+    #quiz1 input {
+        width: 2vw;
+        height: 2vw;
     }
 }

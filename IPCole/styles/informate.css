@@ -270,6 +270,7 @@ footer a h2 {
     margin: 0 0.5vw;
     font-size: var(--subtitulo);
     font-family: 'Dancing Script';
+    font-weight: 700;
 }
 
 /*!custom scroll bar*/

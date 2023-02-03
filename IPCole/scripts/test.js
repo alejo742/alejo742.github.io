@@ -1,8 +1,11 @@
-var main = document.getElementById("main")
-var header = document.querySelector('header')
+const main = document.getElementById("main");
+const header = document.querySelector('header');
+const divResultados = document.getElementById('resultados');
+
 
 function showMain(){
     header.children[2].style.visibility = 'hidden'
+    divResultados.style.display = 'none'
     main.style.display = "flex"
     nextBsAndIds()
 }
@@ -326,17 +329,24 @@ resultados.forEach(resultado =>{
 })
 
 const recomendaciones = [
-['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o'], 
-['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o'], 
-['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o'], 
-['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o'], 
-['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o'], 
-['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o']]
+['Rechaza mensajes de tipo sexual o pornográfico.', 'Comunica sobre lo que ocurre.', 'Denuncia si observas que se comparten fotos íntimas.', 'Si crees ceder ante la presión, bloquea.', 'Evita hablar con extraños.', 'No accedas a chantajes.', 'No compartas información o fotografías comprometedoras.', 'No bromees con este tipo de imágenes o vídeos.', 'No envíes contenidos privados para atraer la atención de otra persona.', 'Infórmate sobre las modalidades de persuasión para cometer sexting.', 'Evalúa muy bien con quién compartes tus fotos o videos, ya sean de contenido sexual o en general.', 'Promueve una visión crítica de aquellos mandatos y presiones sociales sobre la sexualidad.', 'Muéstrate abierto a hablar del tema y solucionar vulnerabilidades.', 'Trabaja en tu autoestima siempre que puedas.', 'Averigua sobre interacciones y cultura de privacidad en línea.'], 
+['Evita usar Wi-Fi públicas.', 'Procura ingresar sólo a páginas seguras.', 'Presta atención al indicador de seguridad 🔒 de tu navegador.', 'Protege tus dispositivos electrónicos con servicios de antivirus.', 'Aléjate de sitios web que muestren mensajes sospechosos.', 'Monitorea con frecuencia tus cuentas digitales en busca de cambios extraños.', 'Usa una VPN cuando tengas que navegar en redes públicas.', 'Trata de usar contraseñas variadas y difíciles de adivinar', 'No dejes rastros de tu información confidencial al cambiar tus dispositivos.', 'Realiza análisis de seguridad a tus dispositivos para buscar malware.', 'Ten cuidado con clones de páginas reales.', 'Sé precavido con los pagos en línea', 'Sé creativo/a con las contraseñas de tus cuentas.', 'Revisa tus medios de contacto con frecuencia en busca de actividad no usual.', 'Usa extensiones de navegación segura en tu navegador.'], 
+['Recurre a tu sentido común para detectar páginas peligrosas.', 'No realices transacciones en línea si tienes dudas sobre la página', 'Verifica con regularidad tu estado de cuenta en busca de actividad.', 'Utiliza plataformas de pago intermedias con saldo reducido.', 'Establece doble comprobación para tus transacciones.', 'Siempre conserva justificantes de tus transacciones.', 'Instala un cortafuegos efectivo si manejas mucho dinero desde tus dispositivos.', 'Nunca proveas tus datos bancarios por teléfono (mensajes o llamadas).', 'Asegúrate que las páginas que visitas cuentan con el certificado HTTPS.', 'Activa, si puedes, las alertas de uso de tarjeta por correo.', 'Somete tus dispositivos a mantenimientos informáticos con expertos.', 'Tu tarjeta debería tener todas las medidas de seguridad disponibles.', 'Implementa funciones de detección de fraude en tus tarjetas.', 'Consulta a tu banco por información para protegerte.', 'Si crees ser víctima, comunica y denuncia inmediatamente.'], 
+['Evita usar dispositivos de acceso público para tu actividad privada.', 'Ten cuidado con correos electrónicos fraudulentos', 'Revisa con frecuencia tus estados de cuenta o resúmenes bancarios.', 'Verifique la veracidad de los sitios web a los que accede antes de colocar información.', 'No confíes en todo lo que ves en redes sociales.', 'Infórmate sobre las políticas de privacidad de tus bancos.', 'No ingreses a enlaces de tu banco a través de correos electrónicos.', 'Mantén tus sistemas actualizados para evitar fallas de seguridad.', 'Las webs a las que ingreses han de empezar por "https://"', 'Si tienes dudas sobre la autenticidad de algo, desconfía.', 'Conoce la evolución de los distintos tipos de malware.', 'Ante cualquier comportamiento inusual, comunica.', 'Escucha testimonios de víctimas de phishing.', 'Ten en mente los dominios web de tus páginas habituales.', 'Aléjate de personas involucradas con este tipo de delitos.'], 
+['Comunícate con alguien de confianza si eres víctima.', 'No tengas verguenza o miedo de denunciar.', 'No sucumbas ante amenazas vacías en línea.', 'Si te incomoda y/o daña, bloquea.', 'Conserva las pruebas del delito si llegas a ser víctima.', 'Sé diligente al publicar contenido en línea.', 'Configura tu privacidad en redes sociales a tu gusto.', 'Usa contraseñas creativas y seguras.', 'Si sabes de un caso, no calles, y denuncia.', 'Infórmate sobre los métodos de acoso digital actuales.', 'Alienta la conciencia social sobre el ciberacoso en tu círculo social.', 'No confundas la violencia con una broma pesada.', 'Selecciona con cuidado a tu lista de amigos/seguidores en redes.', 'No te dejes llevar por información falsa sobre ti.', 'Protege tus datos personales e información comprometedora.'], 
+['Utiliza contraseñas seguras y distintas en tus cuentas.', 'Cambia tus contraseñas algunas veces al año.', 'Usa autenticaciones en 2 pasos para tus procesos digitales.', 'No te conectes a redes públicas si no es absolutamente necesario', 'Usa protocolos seguros en tus correos y programas.', 'Evita instalar software desconocido o pirateado.', 'No hagas click en enlaces de descarga de primera mano.', 'Navega con una VPN siempre que puedas', 'Usa un gestor de contraseñas para tus cuentas.', 'Implementa procesos de seguridad en tu teléfono, para verificaciones.', 'Realiza copias de seguridad de tu información relevante.', 'Da de baja a los servicios digitales que no uses.', 'Asegúrate de que los correos con los que interactúas sean auténticos.', 'Descarga software sólo de fuentes oficiales.', 'Lee opiniones y recomendaciones de expertos sobre el tema.']]
 
 function selectRandomElements(array){
     var arrayRetorno = []
-    for(let i = 0; i < 3; i++){
-        var numRandom = Math.floor(Math.random()*array.length)
+    while(arrayRetorno.length < 3) {
+        const numeroRandom = () => {
+            return Math.floor(Math.random()*array.length)
+        }
+        var numRandom = numeroRandom()
+
+        while(arrayRetorno.includes(array[numRandom])){
+            numRandom = numeroRandom()
+        }
         arrayRetorno.push(array[numRandom])
     }
     return arrayRetorno
