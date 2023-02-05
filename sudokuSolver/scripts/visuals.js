@@ -3,12 +3,12 @@ const loadingScreen = document.getElementsByClassName('loading')[0]; loadingScre
 const mainPage = document.querySelector('main');
 
 setTimeout(() => {
-    loadingScreen.style.animation = 'fadeOut 0.5s'
+    loadingScreen.style.animation = 'fadeOut 2.5s'
     setTimeout(() => {
         loadingScreen.style.display = 'none'
         mainPage.style.display = 'grid'
-    }, 500)
-}, 500)
+    }, 2500)
+}, 2500)
 
 
 //*Menú de navegación
