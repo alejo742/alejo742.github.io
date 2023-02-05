@@ -118,6 +118,7 @@ header {
     justify-content: center;
     animation: moveInDown 2s;
     position: fixed;
+    z-index: 100;
     top: 0;
 }
 .container {
@@ -199,12 +200,11 @@ main > div {
     animation: moveInUp 2s ease-in-out, fadeIn 3.5s;
 }
 .intro-inv{
-    margin: 4vh 0 0 0;
     font-size: calc(var(--texto)/1.3);
     text-transform: uppercase;
     color: var(--colorEnPrimario);
     font-family: monospace;
-    max-width: 30%;
+    width: 30ch;
     padding: 2vh 2vh 2vh 0;
     white-space: nowrap;
     text-decoration: none;
@@ -218,7 +218,7 @@ main > div {
 .intro-inv-underline{
     background-color: var(--colorSecundario);
     height: 0.1vw;
-    width: 30%;
+    width: 30ch;
     animation: invAnimation 3s ease-in;
 }
 
@@ -256,10 +256,17 @@ main > div {
     text-transform: uppercase;
     color: var(--colorEnPrimario);
     font-family: monospace;
-    max-width: 60%;
+    width: 25ch;
     padding: 2vh 2vh 2vh 0;
     white-space: nowrap;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.skills-inv img {
+    width: 3ch;
+    height: auto;
+    margin-left: 2vw;
 }
 .skills-inv:hover{
     background-color: rgba(95, 152, 254, 0.05);
@@ -269,8 +276,9 @@ main > div {
 .skills-inv-underline{
     margin: 0;
     background-color: var(--colorSecundario);
+    font-size: calc(var(--texto)/1.3);
     height: 0.1vw;
-    width: 60%;
+    width: 25ch;
 }
 .skills-desc {
     display: flex;
@@ -278,7 +286,7 @@ main > div {
     justify-content: center;
 }
 .skills-desc p {
-    text-align: justify;
+    text-align: left;
     color: var(--colorEnPrimario);
     opacity: 0.7;
     font-size: var(--texto);
@@ -472,16 +480,19 @@ main > div {
 }
 .career-top{
     display: flex;
-    flex-direction: row;
+    align-items: center;
 }
 .career-top h2 {
     font-size: var(--titulo);
     white-space: nowrap;
-    margin: 0 0 5vh 0;
+    margin: 0 0 0 0;
+    display: flex;
+    align-items: center;
 }
 .career-top h2 strong {
     font-size: var(--subtitulo);
     color: var(--colorSecundario);
+    margin: 0 1.5vw;
 }
 
 .career-wrap {
@@ -525,6 +536,7 @@ main > div {
     outline: 0 solid var(--colorEnPrimario);
     opacity: 0.6;
     text-decoration: none;
+    transition: none;
 }
 .achievement > * {
     margin: 1vh auto;
@@ -587,7 +599,7 @@ main > div {
 }
 .contact p{
     max-width: 60%;
-    text-align: justify;
+    text-align: center;
 }
 .contact p a{
     text-decoration-color: var(--colorEnPrimario);
@@ -595,12 +607,12 @@ main > div {
     font-weight: bold;
 }
 .contact-inv{
-    margin: 4vh auto 0 auto;
+    margin: 0 auto;
     font-size: calc(var(--texto)/1.3);
     text-transform: uppercase;
     color: var(--colorEnPrimario);
     font-family: monospace;
-    width: 30%;
+    width: 175px;
     padding: 2vh 2vh 2vh 0;
     white-space: nowrap;
     text-decoration: none;
@@ -614,43 +626,39 @@ main > div {
     margin: 0 auto;
     background-color: var(--colorSecundario);
     height: 0.1vw;
-    width: 30%;
+    width: 175px;
 }
 
 /*!Footer*/
 
 footer{
     height: 20vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.footer-wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 .f-wrap {
+    margin: 3vh 0 3vh 0;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .f-wrap h2 {
-    font-size: var(--subtitulo);
+    font-size: calc(var(--subtitulo)*0.9);
     font-family: 'Dancing Script', sans-serif;
+    white-space: nowrap;
 }
 .cv-c {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 40ch;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
 .cv-inv{
-    margin: 4vh auto 0 auto;
+    margin: 0 auto 0 auto;
     font-size: calc(var(--texto)/1.3);
     text-transform: uppercase;
     color: var(--colorEnPrimario);
@@ -728,7 +736,6 @@ footer{
 @media (max-width: 900px) {
     p, span{
         line-height: 25px !important;
-        text-align: left !important;
     }
     .intro, .skills, .skill-list, .projects, .career, .contact{
         width: 85%;
@@ -737,27 +744,31 @@ footer{
     .intro {
         height: 100vh;
     }
+    .intro h2, .intro h1, .intro-text {
+        margin: 1.5vh 0;
+    }
     .intro > * {
-        margin: 1.5vh auto !important;
+        margin: 0 auto !important;
     }
     .intro p.main-desc {
         max-width: 75%;
         text-align: center !important;
-    }
-    .intro-inv, .intro-inv-underline {
-        max-width: 70%;
-        font-size: var(--texto);
-        margin: 0 auto !important;
     }
 
     .skills{
         min-height: 70vh;
         gap: 5vw;
     }
+    .skills-inv-underline{
+        max-width: 100%;
+    }
 
     .skill-list h2 {
         white-space: normal;
         text-align: center;
+    }
+    .skills-container {
+        transform: translateX(8vw);
     }
     #skills-container-1 {
         grid-template-columns: 1fr 1fr;
@@ -787,10 +798,6 @@ footer{
         display: flex;
     }
 
-    .career-top {
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr;
-    }
     .career-right {
         display: none;
     }
@@ -802,9 +809,5 @@ footer{
         height: fit-content;
         margin: 0 auto;
         width: 80%;
-    }
-    .footer-wrapper {
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1fr 1fr;
     }
 }

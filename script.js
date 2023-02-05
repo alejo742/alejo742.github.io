@@ -1,4 +1,4 @@
-  //? animacion onscroll arriba:
+//? animacion onscroll arriba:
 function revealUp() {
     var reveals = document.querySelectorAll(".reveal-up");
     for (var i = 0; i < reveals.length; i++) {
