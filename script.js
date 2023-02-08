@@ -22,6 +22,7 @@ function revealRight() {
       var elementTop = reveals[i].getBoundingClientRect().top;
       var elementVisible = 20;
       if (elementTop < windowHeight - elementVisible) {
+        reveals[i].style.transition = "all 1.5s ease"
         reveals[i].classList.add("active-right");
       } 
       else {
@@ -39,6 +40,7 @@ function revealLeft() {
       var elementTop = reveals[i].getBoundingClientRect().top;
       var elementVisible = 20;
       if (elementTop < windowHeight - elementVisible) {
+        reveals[i].style.transition = "all 1.5s ease"
         reveals[i].classList.add("active-left");
       } 
       else {
