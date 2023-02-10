@@ -91,7 +91,7 @@ html{
     orientation: landscape;
 }
 body{
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
     font-family: sans-serif;
@@ -225,5 +225,20 @@ main {
     }
     .right > div a {
         padding: 2vw 2.5vw;
+    }
+}
+@media only screen and (max-width: 600px) {
+    main {
+        grid-template-columns: none;
+    }
+    .left{
+        display: none;
+    }
+    .right{
+        gap: 3vh;
+    }
+    .right > * {
+        margin: 0 auto !important;
+        text-align: center;
     }
 }
