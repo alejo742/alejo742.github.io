@@ -104,8 +104,8 @@ h1, h2, h3 {
 
     --texto: clamp(1.2rem, 0.7153rem + 1.64vw, 1.8rem);
     --subtitulo: clamp(2.4rem, 1.4rem + 3.2vw, 3.6rem);
-    --titulo: clamp(3rem, 2rem + 4vw, 6rem);
-    --banner: clamp(4rem, 2.5rem + 4.5vw, 7.5rem);
+    --titulo: clamp(3rem, 2rem + 4vw, 5rem);
+    --banner: clamp(4rem, 2.5rem + 3.5vw, 6.5rem);
 }
 
 /*!Fin de estilos generales*/
@@ -611,6 +611,7 @@ main > div {
 }
 .contact-inv{
     margin: 0 auto;
+    margin-top: 1vh;
     font-size: calc(var(--texto)/1.3);
     text-transform: uppercase;
     color: var(--colorEnPrimario);
@@ -652,38 +653,6 @@ footer{
     font-size: calc(var(--subtitulo)*0.9);
     font-family: 'Dancing Script', sans-serif;
     white-space: nowrap;
-}
-.cv-c {
-    display: flex;
-    flex-direction: column;
-    width: 40ch;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-.cv-inv{
-    margin: 0 auto 0 auto;
-    font-size: calc(var(--texto)/1.3);
-    text-transform: uppercase;
-    color: var(--colorEnPrimario);
-    font-family: monospace;
-    width: 70%;
-    padding: 2vh 2vh 2vh 0;
-    white-space: nowrap;
-    text-decoration: none;
-    transition: all 0.5s;
-}
-.cv-inv:hover{
-    background-color: rgba(95, 152, 254, 0.05);
-    font-size: calc(var(--texto)/1.3);
-    cursor: pointer;
-    padding-left: 2ch;
-}
-.cv-inv-underline{
-    margin: 0 auto;
-    background-color: var(--colorSecundario);
-    height: 0.1vw;
-    width: 70%;
 }
 
 /*!Animaciones*/
@@ -764,6 +733,9 @@ footer{
     .skills{
         min-height: 70vh;
         gap: 5vw;
+    }
+    .skills h2 {
+        font-size: calc(var(--titulo)*0.8);
     }
     .skills-inv-underline{
         max-width: 100%;
