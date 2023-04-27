@@ -162,10 +162,10 @@
             </div>
         </section>
         <section class="content-section" id="generador">
-            <div class="top-content">
-                <h2>Sudoku 9x9</h2>
-            </div>
             <div class="generator">
+                <div class="top-content">
+                    <h2>Sudoku 9x9</h2>
+                </div>
                 <div class="sudoku-container">
                     <div class="sudoku-g">
                         <div class="outer-box-g">
@@ -269,15 +269,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="generator-ui">
+            </div>
+            <div class="generator-ui">
+                <h2>Panel de control</h2>
+                <div class="dificultad">
+                    <h3>Dificultad</h3>
                     <select name="dificultad" id="select-dificultad">
                         <option value="fácil" selected>Fácil</option>
                         <option value="normal">Normal</option>
                         <option value="difícil">Difícil</option>
                     </select>
-                    <div></div>
-                    <button id="generate-button">¡Generar!</button>
                 </div>
+                <div class="show-progress">
+                    <input type="checkbox">
+                    <span>Mostrar progreso al resolver</span>
+                </div>
+                <button id="generate-button">¡Generar!</button>
             </div>
         </section>
     </main>

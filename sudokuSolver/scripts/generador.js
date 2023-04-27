@@ -57,6 +57,10 @@ botonGenerar.addEventListener('click', () => {
   const sudoku = document.querySelector('.sudoku-g')
   const inputs = document.querySelectorAll('.inner-box-g')
   const filas = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+  let generatedSudoku = generateSudoku()
+  let initialSudoku = generatedSudoku
+  console.log(initialSudoku)
+  console.log(generatedSudoku)
   //*Resetear para volver a generar
   inputs.forEach(input => {
     input.removeAttribute('readonly')
@@ -87,9 +91,41 @@ botonGenerar.addEventListener('click', () => {
   }
   let casillas = getBoxes()
 
+  //*Eliminar algunas casillas de acuerdo a la dificultad
+  function eliminateBoxes(min, max) {
+    let eliminar = 81 - randomNumber(min, max)
+    let eliminados = 0
+    while(eliminar > eliminados) {
+      let random1 = randomNumber(0, 8)
+      let random2 = randomNumber(0, 8)
+      if(generatedSudoku[random1][random2] != "") {
+        let oldValue = generatedSudoku[random1][random2]
+        generatedSudoku[random1][random2] = ""
+        let modifiedSudoku = generatedSudoku
+
+        //Comparación de sudoku inicial con el resuelto
+        function compareSudokus() {
+          for(let i = 0; i < 9; i++) {
+            for(let j = 0; j < 9; j++) {
+              if(modifiedSudoku[i][j] !== initialSudoku[i][j]){
+                return false
+              }
+            }
+          }
+          return true
+        }
+        if(!compareSudokus) {
+          generatedSudoku[random1][random2] = oldValue
+        }
+        else {
+          eliminados++
+        }
+      }
+    }
+  }
+  eliminateBoxes(casillas[0], casillas[1])
+
   //*Llenar el sudoku con los valores generados
-  let generatedSudoku = generateSudoku()
-  console.log(generatedSudoku)
 
   for(let i = 0; i < sudoku.children.length; i++) {
     let rowToFill = [];
@@ -104,26 +140,6 @@ botonGenerar.addEventListener('click', () => {
   }
     
 
-  //*Eliminar algunas casillas de acuerdo a la dificultad
-  function eliminateBoxes(min, max) {
-    let eliminar = 81 - randomNumber(min, max)
-    let eliminados = 0
-
-    function eliminateRandomBox() {
-      let randomNumber = Math.floor(Math.random()*81)
-      console.log(randomNumber)
-      if(inputs[randomNumber].value != ""){
-        inputs[randomNumber].value = ""
-        eliminados ++
-        return true
-      }
-    }
-    while(eliminar > eliminados) {
-      eliminateRandomBox()
-    }
-  }
-  eliminateBoxes(casillas[0], casillas[1])
-
   //*Evitar que se editen los inputs que están llenos
   inputs.forEach(input => {
     if(input.value != "") {
@@ -135,4 +151,6 @@ botonGenerar.addEventListener('click', () => {
     }
   })
 })
+
+
 

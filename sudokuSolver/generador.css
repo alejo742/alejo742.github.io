@@ -18,8 +18,9 @@
 
 /*Generador*/
 #generador{
-    flex-direction: column;
+    flex-direction: row;
     gap: 3vh;
+    overflow-y: scroll;
 }
 .top-content {
     width: 100%;
@@ -37,7 +38,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3vw;
+    gap: 3vh;
 }
 .sudoku-g {
     aspect-ratio: 1 / 1;
@@ -67,6 +68,7 @@
 .generator-ui{
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2vh;
@@ -79,13 +81,6 @@
     outline: none;
     border: 1px solid var(--colorSecundario);
     box-shadow: 0 0 1vw var(--colorSecundario);
-}
-.generator-ui div {
-    width: 0.1vw;
-    height: 100%;
-    background-color: var(--colorEnPrimario);
-    opacity: 0.6;
-    margin: 0 1vw;
 }
 .generator-ui button {
     font-size: var(--texto);
@@ -105,6 +100,9 @@
 
 @media only screen and (max-width: 1050px) {
     .solver {
+        flex-wrap: wrap;
+    }
+    #generador {
         flex-wrap: wrap;
     }
 }
