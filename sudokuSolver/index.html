@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./resolutor.css">
     <link rel="stylesheet" href="./generador.css">
-    <title>Sudoku | Resuelve sudokus online</title>
+    <title>Sudoku | Solve and create sudokus</title>
 </head>
 <body>
     <section class="loading">
@@ -24,28 +24,28 @@
             <div class="loading-bar"></div>
             <div class="loading-bar"></div>
         </div>
-        <h2 class="loading-title">Cargando...</h2>
+        <h2 class="loading-title">Loading...</h2>
     </section>
 
     <main style="display: none;">
         <nav>
             <div class="logo">
                 <img src="./res/logo.png" alt="S">
-                <button id="menu-button"><img src="./res/menu-icon.svg" alt=""> Menú</button>
+                <button id="menu-button"><img src="./res/menu-icon.svg" alt=""> Menu</button>
             </div>
             <div class="navigation" id="navigation">
                 <button class="nav-button selected">
                     <img class="nav-icon" src="./res/resolutor-icon.svg" alt="">
-                    <span class="nav-text">Resolutor</span>
+                    <span class="nav-text">Solve</span>
                 </button>
                 <button class="nav-button">
                     <img class="nav-icon" src="./res/generador-icon.svg" alt="">
-                    <span class="nav-text">Generador</span>
+                    <span class="nav-text">Generate</span>
                 </button>
             </div>
         </nav>
 
-        <section class="content-section displaying" id="resolutor">
+        <section style="flex-direction: column; gap: 2rem;" class="content-section displaying" id="solve">
             <div class="top-content">
                 <h2>Sudoku 9x9</h2>
             </div>
@@ -157,11 +157,11 @@
                     <p></p>
                 </div>
                 <div class="solver-ui">
-                    <button id="resolve-button">¡Resolver!</button>
+                    <button id="resolve-button">Solve!</button>
                 </div>
             </div>
         </section>
-        <section class="content-section" id="generador">
+        <section class="content-section" id="generate">
             <div class="generator">
                 <div class="top-content">
                     <h2>Sudoku 9x9</h2>
@@ -271,20 +271,20 @@
                 </div>
             </div>
             <div class="generator-ui">
-                <h2>Panel de control</h2>
+                <h2>Settings</h2>
                 <div class="dificultad">
                     <h3>Dificultad</h3>
                     <select name="dificultad" id="select-dificultad">
-                        <option value="fácil" selected>Fácil</option>
-                        <option value="normal">Normal</option>
-                        <option value="difícil">Difícil</option>
+                        <option value="fácil" selected>Easy</option>
+                        <option value="normal">Moderate</option>
+                        <option value="difícil">Hard</option>
                     </select>
                 </div>
-                <div class="show-progress">
+                <div style="display: none;" class="show-progress">
                     <input type="checkbox">
-                    <span>Mostrar progreso al resolver</span>
+                    <span>Show progress while solving</span>
                 </div>
-                <button id="generate-button">¡Generar!</button>
+                <button id="generate-button">Generate!</button>
             </div>
         </section>
     </main>

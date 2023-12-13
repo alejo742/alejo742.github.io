@@ -448,7 +448,7 @@ main > div {
     justify-content: end;
     font-size: var(--texto);
     margin: 2vh auto 0 auto;
-    border-radius: 5%;
+    border-radius: 20px;
     text-decoration: none;
 }
 .project h3{
@@ -465,10 +465,13 @@ main > div {
     padding-bottom: 5vh;
     padding-left: 5vw;
     background: linear-gradient(to top, black, rgba(0, 0, 0, 0));;
+    border-radius: 20px;
     animation: fadeIn 1s;
 }
 .project h3 strong {
     color: var(--colorSecundario);
+    font-size: calc(var(--texto));
+    font-weight: 500;
 }
 .project:hover h3 {
     display: flex;
